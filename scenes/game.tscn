@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqgdtre7m6pyj"]
+
+[ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://c1wn5lb2nvrks" path="res://assets/TILES.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_lbhrr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
+atlas = ExtResource("2_yqjtg")
+region = Rect2(0, 74, 160, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(87.896996, 151.27283)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
+atlas = ExtResource("4_lbhrr")
+region = Rect2(39, 5, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
+atlas = ExtResource("4_lbhrr")
+region = Rect2(1, 1, 36, 32)
+
+[node name="game" type="Node2D"]
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="Platform" type="StaticBody2D" parent="Platform"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/Platform"]
+position = Vector2(80, 82)
+texture = SubResource("AtlasTexture_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Platform"]
+position = Vector2(80, 83.5)
+scale = Vector2(1.8203125, 0.08593744)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="Platform2" type="StaticBody2D" parent="Platform"]
+position = Vector2(160, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/Platform2"]
+position = Vector2(80, 82)
+texture = SubResource("AtlasTexture_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Platform2"]
+position = Vector2(80, 83.5)
+scale = Vector2(1.8203125, 0.08593744)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="Shelf" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(59, 60)
+texture = SubResource("AtlasTexture_lbhrr")
+
+[node name="Shelf2" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(113, 58)
+texture = SubResource("AtlasTexture_iywne")
+
+[node name="Player" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(9, 70)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -25)

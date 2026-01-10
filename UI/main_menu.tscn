@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://cljhuqxxmd762"]
+
+[ext_resource type="Script" uid="uid://cn4hukybb81m" path="res://scripts/main_menu.gd" id="1_d8nwk"]
+[ext_resource type="Texture2D" uid="uid://44ydh61tsofh" path="res://assets/buttons.png" id="1_p8ccj"]
+[ext_resource type="Texture2D" uid="uid://dki4m7wm2urtd" path="res://assets/main_menu.png" id="1_tk8dj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8ccj"]
+atlas = ExtResource("1_p8ccj")
+region = Rect2(32, 0, 35, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tk8dj"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 16, 32, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f40uw"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 56, 32, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8nwk"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 36, 32, 9)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8ccj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8ccj"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 26, 32, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ctay"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 66, 32, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cwpn"]
+texture = ExtResource("1_p8ccj")
+region_rect = Rect2(112, 46, 32, 9)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk8dj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d8nwk")
+
+[node name="MainMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tk8dj")
+
+[node name="Ropes" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -45.0
+offset_right = -36.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_p8ccj")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.96875
+anchor_top = 0.45555556
+anchor_right = 0.96875
+anchor_bottom = 0.45555556
+offset_left = -66.0
+offset_top = -17.0
+offset_right = -34.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(32, 9)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d8nwk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8ccj")
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(32, 9)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_p8ccj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8ctay")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4cwpn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tk8dj")
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
