@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-signal interact_pressed
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
@@ -13,9 +11,6 @@ func _process(delta: float) -> void:
 		anim.play("move")
 	else:
 		anim.play("idle")
-		
-	if Input.is_action_just_pressed("interact"):
-		interact_pressed.emit()
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta

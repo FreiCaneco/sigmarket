@@ -1,20 +1,34 @@
 extends Node2D
 
+signal player_interacted
+var player_in_area := false
+
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var texture_original_y = texture_rect.position.y
-var hover_tween := create_tween()
-var opacity_tween := create_tween()
+var hover_tween: Tween
+var opacity_tween: Tween
+
+func _ready() -> void:
+	set_process(false)
+
+func _process(delta: float) -> void:
+	if player_in_area and Input.is_action_just_pressed("interact"):
+			player_interacted.emit()
+			interaction_animation()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		set_process(true)
 		reset_tweens()
 		start_hover_animation()
+		player_in_area = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		set_process(false)
 		reset_tweens()
-		opacity_tween = create_tween()
-		opacity_tween.tween_property(texture_rect,"modulate:a",0,0.1)
+		clear_opacity()
+		player_in_area = false
 
 func start_hover_animation() -> void:
 	opacity_tween = create_tween()
@@ -22,10 +36,18 @@ func start_hover_animation() -> void:
 	
 	hover_tween = create_tween()
 	hover_tween.set_loops()
-	hover_tween.set_trans(hover_tween.TRANS_SINE).set_ease(hover_tween.EASE_IN_OUT)
+	hover_tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	hover_tween.tween_property(texture_rect,"position:y",texture_original_y - 2,0.3)
 	hover_tween.tween_property(texture_rect,"position:y",texture_original_y,0.3)
 
+func interaction_animation() -> void:
+	reset_tweens()
+	clear_opacity()
+
+func clear_opacity() -> void:
+	opacity_tween = create_tween()
+	opacity_tween.tween_property(texture_rect,"modulate:a",0,0.1)
+	
 func reset_tweens() -> void:
 	if hover_tween:
 		hover_tween.kill()

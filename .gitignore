@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+# Rider / IntelliJ / JetBrains files
+.idea/
+*.iml
+cmake-build-*/
