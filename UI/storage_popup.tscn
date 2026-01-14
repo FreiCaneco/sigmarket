@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbwpbtyj2p4ef"]
+[gd_scene load_steps=7 format=3 uid="uid://dbwpbtyj2p4ef"]
 
 [ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://assets/StoragePopUp.png" id="1_1ycag"]
 [ext_resource type="Script" uid="uid://boi4sj6q3y83u" path="res://UI/storage_popup.gd" id="1_mxshs"]
+[ext_resource type="PackedScene" uid="uid://bh5ivsmm0pckh" path="res://UI/drag_and_drop_icon.tscn" id="3_b3ulc"]
+[ext_resource type="Texture2D" uid="uid://cwhdl3us4llhr" path="res://assets/items.png" id="4_fucs8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxshs"]
 atlas = ExtResource("1_1ycag")
 region = Rect2(0, 0, 73, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3ulc"]
+atlas = ExtResource("4_fucs8")
+region = Rect2(0, 24, 8, 8)
 
 [node name="StoragePopUp" type="Control"]
 layout_mode = 3
@@ -21,3 +27,51 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AtlasTexture_mxshs")
+
+[node name="Storage" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(63, 63)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+columns = 6
+
+[node name="DragAndDropIcon" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_b3ulc")
+
+[node name="DragAndDropIcon2" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon3" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon4" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon5" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon6" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon7" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon8" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon9" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon10" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon11" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2
+
+[node name="DragAndDropIcon12" parent="Storage" instance=ExtResource("3_b3ulc")]
+layout_mode = 2

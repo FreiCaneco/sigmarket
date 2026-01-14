@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh5ivsmm0pckh"]
+
+[ext_resource type="Script" uid="uid://c5krpyt37k3fw" path="res://UI/drag_and_drop_icon.gd" id="1_6m86u"]
+
+[node name="DragAndDropIcon" type="TextureRect"]
+custom_minimum_size = Vector2(8, 8)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 2
+script = ExtResource("1_6m86u")

@@ -11,6 +11,6 @@ script = ExtResource("1_xj574")
 [node name="InteractionComponent" parent="." instance=ExtResource("2_00mi8")]
 
 [node name="CameraPosition" type="Marker2D" parent="."]
-position = Vector2(-17, 19)
+position = Vector2(-17, 25)
 
 [connection signal="player_interacted" from="InteractionComponent" to="." method="_on_player_interacted"]

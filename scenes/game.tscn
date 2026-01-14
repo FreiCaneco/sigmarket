@@ -16,11 +16,11 @@ size = Vector2(87.896996, 151.27283)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
 atlas = ExtResource("4_lbhrr")
-region = Rect2(1, 1, 36, 32)
+region = Rect2(39, 5, 24, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
 atlas = ExtResource("4_lbhrr")
-region = Rect2(39, 5, 24, 28)
+region = Rect2(1, 1, 36, 32)
 
 [node name="game" type="Node2D"]
 
@@ -50,11 +50,11 @@ scale = Vector2(1.8203125, 0.08593744)
 shape = SubResource("RectangleShape2D_yqjtg")
 
 [node name="Shelf" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(100, 58)
+position = Vector2(61, 60)
 texture = SubResource("AtlasTexture_iywne")
 
 [node name="Shelf2" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(157, 60)
+position = Vector2(163, 58)
 texture = SubResource("AtlasTexture_p57ef")
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
