@@ -11,7 +11,6 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	var preview = Control.new()
 	preview.add_child(preview_texture)
 	preview_texture.position = -0.5 * preview_texture.size
-	
 	set_drag_preview(preview)
 	texture = null
 
