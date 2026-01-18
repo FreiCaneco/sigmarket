@@ -1,16 +1,3 @@
-[gd_scene load_steps=5 format=3 uid="uid://dswbs8iho1bs"]
+[gd_scene format=3 uid="uid://dswbs8iho1bs"]
 
-[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="1_o02vu"]
-[ext_resource type="Resource" uid="uid://benye3t1ff5kk" path="res://resources/shelfs/2x2_shelf.tres" id="2_3iyrq"]
-[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="2_7w86a"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7w86a"]
-atlas = ExtResource("2_7w86a")
-region = Rect2(39, 5, 24, 28)
-
-[node name="Teste" type="Node2D"]
-
-[node name="Shelf" parent="." instance=ExtResource("1_o02vu")]
-position = Vector2(123, 47)
-shelf_res = ExtResource("2_3iyrq")
-texture = SubResource("AtlasTexture_7w86a")
+[node name="Control" type="Node2D"]

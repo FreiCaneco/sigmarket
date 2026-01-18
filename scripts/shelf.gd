@@ -19,8 +19,7 @@ func _ready() -> void:
 
 func _on_player_interacted() -> void:
 	InteractionEvents.shelf_interacted.emit(self)
-		
-
+	
 func add_slots_based_on_type() -> void:
 	var numOfSlots: int
 	var grid := GridContainer.new()
@@ -36,6 +35,7 @@ func add_slots_based_on_type() -> void:
 			numOfSlots = 4
 			add_child(grid)
 			for i in range(numOfSlots):
-				var item = load("res://scenes/item.tscn")
-				item = item.instantiate()
-				grid.add_child(item)
+				pass
+				#var item = load("res://scenes/item.tscn")
+				#item = item.instantiate()
+				#grid.add_child(item)

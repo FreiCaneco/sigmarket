@@ -1,16 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbwpbtyj2p4ef"]
+[gd_scene load_steps=4 format=3 uid="uid://dbwpbtyj2p4ef"]
 
 [ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://assets/StoragePopUp.png" id="1_1ycag"]
 [ext_resource type="Script" uid="uid://boi4sj6q3y83u" path="res://UI/storage_popup.gd" id="1_mxshs"]
-[ext_resource type="PackedScene" uid="uid://xh0c14u401rd" path="res://scenes/item.tscn" id="3_b3ulc"]
-[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://assets/items6x6.png" id="4_fucs8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxshs"]
 atlas = ExtResource("1_1ycag")
 region = Rect2(0, 0, 73, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b3ulc"]
-atlas = ExtResource("4_fucs8")
 
 [node name="StoragePopUp" type="Control"]
 layout_mode = 3
@@ -35,25 +30,7 @@ offset_left = 5.0
 offset_top = 5.0
 offset_right = 68.0
 offset_bottom = 68.0
+mouse_filter = 2
 theme_override_constants/h_separation = 3
 theme_override_constants/v_separation = 3
 columns = 6
-
-[node name="Item" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2
-texture = SubResource("AtlasTexture_b3ulc")
-
-[node name="Item2" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2
-
-[node name="Item3" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2
-
-[node name="Item4" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2
-
-[node name="Item5" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2
-
-[node name="Item6" parent="Storage" instance=ExtResource("3_b3ulc")]
-layout_mode = 2

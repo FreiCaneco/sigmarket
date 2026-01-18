@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqgdtre7m6pyj"]
+[gd_scene load_steps=11 format=3 uid="uid://dqgdtre7m6pyj"]
 
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c1wn5lb2nvrks" path="res://assets/TILES.png" id="2_yqjtg"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://UI/storage_popup.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpj4xid3rehgd" path="res://scripts/camera.gd" id="5_p57ef"]
 [ext_resource type="Resource" uid="uid://benye3t1ff5kk" path="res://resources/shelfs/2x2_shelf.tres" id="6_p57ef"]
-[ext_resource type="PackedScene" uid="uid://bpsq2vits1353" path="res://singletons/TopLayer.tscn" id="7_gee14"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
 atlas = ExtResource("2_yqjtg")
@@ -59,8 +58,8 @@ position = Vector2(9, 70)
 offset = Vector2(0, -25)
 script = ExtResource("5_p57ef")
 
-[node name="TopLayer" parent="." instance=ExtResource("7_gee14")]
-layer = 3
+[node name="TopLayer" type="CanvasLayer" parent="." groups=["DraggableScenes"]]
+layer = 0
 
 [node name="StoragePopUp" parent="TopLayer" instance=ExtResource("5_iywne")]
 visible = false

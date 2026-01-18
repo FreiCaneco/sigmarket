@@ -1,5 +1,7 @@
 extends Control
 
+@onready var grid: GridContainer = $Storage
+
 func _ready() -> void:
 	self.visible = false
 	InteractionEvents.shelf_interacted.connect(open_storage)
