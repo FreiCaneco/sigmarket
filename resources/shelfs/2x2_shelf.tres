@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="shelf_resource" load_steps=2 format=3 uid="uid://benye3t1ff5kk"]
-
-[ext_resource type="Script" uid="uid://srn3rl4f16x0" path="res://resources/shelf_resource.gd" id="1_ww0hf"]
-
-[resource]
-script = ExtResource("1_ww0hf")
-metadata/_custom_type_script = "uid://srn3rl4f16x0"

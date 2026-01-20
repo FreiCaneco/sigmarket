@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dswbs8iho1bs"]
+
+[ext_resource type="PackedScene" uid="uid://cqlopwmewqv5o" path="res://scenes/item_game.tscn" id="1_o02vu"]
+[ext_resource type="Resource" uid="uid://cn8wgtqxabae5" path="res://resources/items/apple.tres" id="2_7w86a"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="ItemGame" parent="." instance=ExtResource("1_o02vu")]
+position = Vector2(78, 44)
+item_res = ExtResource("2_7w86a")
+
+[connection signal="body_entered" from="ItemGame" to="ItemGame" method="_on_body_entered"]
+[connection signal="body_exited" from="ItemGame" to="ItemGame" method="_on_body_exited"]

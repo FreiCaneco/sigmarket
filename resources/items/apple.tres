@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://cn8wgtqxabae5"]
+
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://assets/items6x6.png" id="1_2oqkr"]
+[ext_resource type="Script" uid="uid://ggeuckxrh3si" path="res://resources/item_resource.gd" id="1_4nsy8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw5el"]
+atlas = ExtResource("1_2oqkr")
+region = Rect2(64, 32, 8, 8)
+
+[resource]
+script = ExtResource("1_4nsy8")
+item_name = "apple"
+item_texture = SubResource("AtlasTexture_yw5el")
+metadata/_custom_type_script = "uid://ggeuckxrh3si"

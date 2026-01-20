@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://dqgdtre7m6pyj"]
 
+[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c1wn5lb2nvrks" path="res://assets/TILES.png" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_lbhrr"]
+[ext_resource type="Resource" uid="uid://byiqu0pfnpedl" path="res://resources/shelfs/two_by_two.tres" id="3_p57ef"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://UI/storage_popup.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpj4xid3rehgd" path="res://scripts/camera.gd" id="5_p57ef"]
-[ext_resource type="Resource" uid="uid://benye3t1ff5kk" path="res://resources/shelfs/2x2_shelf.tres" id="6_p57ef"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
 atlas = ExtResource("2_yqjtg")
@@ -15,8 +15,8 @@ region = Rect2(0, 74, 160, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
 size = Vector2(87.896996, 151.27283)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
-atlas = ExtResource("4_lbhrr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+atlas = ExtResource("4_u5sy4")
 region = Rect2(39, 5, 24, 28)
 
 [node name="game" type="Node2D"]
@@ -46,10 +46,10 @@ position = Vector2(80, 83.5)
 scale = Vector2(1.8203125, 0.08593744)
 shape = SubResource("RectangleShape2D_yqjtg")
 
-[node name="Shelf" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(66, 63)
-shelf_res = ExtResource("6_p57ef")
-texture = SubResource("AtlasTexture_u5sy4")
+[node name="Shelf" parent="." instance=ExtResource("2_iywne")]
+position = Vector2(73, 63)
+shelf_res = ExtResource("3_p57ef")
+texture = SubResource("AtlasTexture_p57ef")
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
 position = Vector2(9, 70)
@@ -58,7 +58,7 @@ position = Vector2(9, 70)
 offset = Vector2(0, -25)
 script = ExtResource("5_p57ef")
 
-[node name="TopLayer" type="CanvasLayer" parent="." groups=["DraggableScenes"]]
+[node name="TopLayer" type="CanvasLayer" parent="." groups=["UI"]]
 layer = 0
 
 [node name="StoragePopUp" parent="TopLayer" instance=ExtResource("5_iywne")]

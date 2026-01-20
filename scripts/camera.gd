@@ -1,13 +1,12 @@
 extends Camera2D
 
-
 func _enter_tree() -> void:
 	Global.cam = self
 	
 func _ready() -> void:
-	InteractionEvents.shelf_interacted.connect(go_to_shelf)
-	InteractionEvents.exit_pressed.connect(go_to_player)
-	
+	SignalBus.shelf_interacted.connect(go_to_shelf)
+	SignalBus.exit_pressed.connect(go_to_player)
+		 
 func go_to_shelf(shelf: Node2D) -> void:
 	var correct_position: Marker2D = shelf.get_node("CameraPosition")
 	

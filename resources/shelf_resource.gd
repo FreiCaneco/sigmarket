@@ -1,5 +1,5 @@
 extends Resource
-class_name shelf_resource
+class_name ShelfResource
 
 enum shelf_types {
 	SQUARE_2X2,

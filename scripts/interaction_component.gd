@@ -1,6 +1,6 @@
 extends Node2D
 
-signal player_interacted(player: Node2D)
+signal player_interacted
 var player_in_area := false
 
 @onready var texture_rect: TextureRect = $TextureRect
@@ -13,14 +13,14 @@ var interacting: bool = false
 func _ready() -> void:
 	set_process(false)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		player_interacted.emit()
 		interaction_animation()
 		interacting = true
-			
+
 	if Input.is_action_just_pressed("exit") and interacting == true:
-		InteractionEvents.exit_pressed.emit()
+		SignalBus.exit_pressed.emit()
 		interacting = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -29,7 +29,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		reset_tweens()
 		start_hover_animation()
 		player_in_area = true
-	
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):

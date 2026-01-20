@@ -4,8 +4,8 @@ var player: CharacterBody2D
 @onready var anim: AnimationPlayer = $"../AnimationPlayer"
 
 func _ready() -> void:
-	InteractionEvents.shelf_interacted.connect(shelf_interaction)
-	InteractionEvents.exit_pressed.connect(shelf_exit)
+	SignalBus.shelf_interacted.connect(shelf_interaction)
+	SignalBus.exit_pressed.connect(shelf_exit)
 	player = get_parent()
 
 func shelf_interaction(_shelf) -> void:
