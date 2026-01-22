@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://cxx046m5tmmyy"]
+
+[ext_resource type="Script" uid="uid://ggeuckxrh3si" path="res://resources/item_resource.gd" id="1_65f3n"]
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://assets/items6x6.png" id="1_p0rfk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1dgq"]
+atlas = ExtResource("1_p0rfk")
+region = Rect2(64, 40, 8, 8)
+
+[resource]
+script = ExtResource("1_65f3n")
+item_name = "Green Apple"
+item_texture = SubResource("AtlasTexture_i1dgq")
+metadata/_custom_type_script = "uid://ggeuckxrh3si"

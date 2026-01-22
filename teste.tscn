@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://dswbs8iho1bs"]
+[gd_scene load_steps=3 format=3 uid="uid://dswbs8iho1bs"]
+
+[ext_resource type="PackedScene" uid="uid://xh0c14u401rd" path="res://scenes/item.tscn" id="1_7w86a"]
+[ext_resource type="Resource" uid="uid://cn8wgtqxabae5" path="res://resources/items/apple.tres" id="2_s2wow"]
 
 [node name="TestScene" type="Node2D"]
+
+[node name="Item" parent="." instance=ExtResource("1_7w86a")]
+offset_left = 27.0
+offset_top = 40.0
+offset_right = 35.0
+offset_bottom = 48.0
+item_res = ExtResource("2_s2wow")

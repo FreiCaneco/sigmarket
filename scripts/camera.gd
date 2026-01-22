@@ -5,7 +5,7 @@ func _enter_tree() -> void:
 	
 func _ready() -> void:
 	SignalBus.shelf_interacted.connect(go_to_shelf)
-	SignalBus.exit_pressed.connect(go_to_player)
+	SignalBus.player_stopped_interacting.connect(go_to_player)
 		 
 func go_to_shelf(shelf: Node2D) -> void:
 	var correct_position: Marker2D = shelf.get_node("CameraPosition")

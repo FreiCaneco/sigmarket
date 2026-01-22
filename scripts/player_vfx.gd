@@ -5,7 +5,7 @@ var player: CharacterBody2D
 
 func _ready() -> void:
 	SignalBus.shelf_interacted.connect(shelf_interaction)
-	SignalBus.exit_pressed.connect(shelf_exit)
+	SignalBus.player_stopped_interacting.connect(shelf_exit)
 	player = get_parent()
 
 func shelf_interaction(_shelf) -> void:

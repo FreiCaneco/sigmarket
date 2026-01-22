@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready() -> void:
 	Global.player = self
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if velocity.x != 0:
 		anim.play("move")
 	else:

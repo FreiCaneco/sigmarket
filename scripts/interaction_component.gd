@@ -20,7 +20,7 @@ func _process(_delta: float) -> void:
 		interacting = true
 
 	if Input.is_action_just_pressed("exit") and interacting == true:
-		SignalBus.exit_pressed.emit()
+		SignalBus.player_stopped_interacting.emit()
 		interacting = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

@@ -13,18 +13,20 @@ extends Node2D
 var ui_canvas: CanvasLayer
 var slots_grid: GridContainer
 
-func _ready() -> void:
+func _ready() -> void:	
 	ui_canvas = get_tree().get_first_node_in_group("UI")
 	if texture:
 		sprite_2d.texture = texture
+	
 	add_slots_based_on_type()
 
 func _process(_delta: float) -> void:
 	if slots_grid and slots_grid.visible:
-		# Use a reference point on the shelf
 		var shelf_screen_pos = get_global_transform_with_canvas().origin
 		var z = Global.cam.zoom.x
+		# Precisa transformar isso em dinamico, pois esse valor dep
 		var grid_offset = Vector2(-9, -12)
+		
 		slots_grid.global_position = (shelf_screen_pos + (grid_offset * z)).round()
 		slots_grid.scale = Vector2(z, z)
 
