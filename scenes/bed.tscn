@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://0sje20pceqvf"]
+
+[ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://scenes/interaction_component.tscn" id="1_fqty4"]
+[ext_resource type="Script" uid="uid://c23ythw6aklfx" path="res://scripts/bed.gd" id="1_raxto"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="2_raxto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raxto"]
+size = Vector2(26, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_853xm"]
+atlas = ExtResource("2_raxto")
+region = Rect2(112, 19, 26, 13)
+
+[node name="Bed" type="Node2D"]
+script = ExtResource("1_raxto")
+
+[node name="InteractionComponent" parent="." instance=ExtResource("1_fqty4")]
+collision_form = SubResource("RectangleShape2D_raxto")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_853xm")
+
+[connection signal="player_interacted" from="InteractionComponent" to="." method="_on_interaction_component_player_interacted"]

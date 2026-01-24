@@ -1,61 +1,59 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqgdtre7m6pyj"]
+[gd_scene load_steps=13 format=4 uid="uid://dqgdtre7m6pyj"]
 
 [ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c1wn5lb2nvrks" path="res://assets/TILES.png" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://byiqu0pfnpedl" path="res://resources/shelfs/two_by_two.tres" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://rx3ig8oe2u7s" path="res://scenes/door.tscn" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://UI/storage_popup.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpj4xid3rehgd" path="res://scripts/camera.gd" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cb580e2s642qq" path="res://scenes/day_passer.tscn" id="6_0tnpc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(0, 74, 160, 16)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
+texture = ExtResource("2_yqjtg")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4, 8, -4, 8, 8, -8, 8)
+3:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+3:3/0 = 0
+5:3/0 = 0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(87.896996, 151.27283)
+[sub_resource type="TileSet" id="TileSet_p57ef"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_u5sy4")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
 atlas = ExtResource("4_u5sy4")
 region = Rect2(39, 5, 24, 28)
 
 [node name="game" type="Node2D"]
 
-[node name="Platform" type="Node2D" parent="."]
+[node name="TimeManager" parent="." instance=ExtResource("6_0tnpc")]
 
-[node name="Platform" type="StaticBody2D" parent="Platform"]
+[node name="Timer" type="Timer" parent="TimeManager"]
+wait_time = 5.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform/Platform"]
-position = Vector2(80, 82)
-texture = SubResource("AtlasTexture_lnu2h")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAAAAAADAAEAAAACAAAAAAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAHAAAAAAADAAEAAAAIAAAAAAADAAEAAAAAAAEAAAAHAAEAAAABAAEAAAAHAAEAAAACAAEAAAAHAAEAAAADAAEAAAAHAAEAAAAEAAEAAAAHAAEAAAAFAAEAAAAHAAEAAAAGAAEAAAAHAAEAAAAHAAEAAAAHAAEAAAAIAAEAAAAHAAEAAAACAAMAAAADAAMAAAAHAAMAAAAFAAMAAAAGAAMAAAADAAMAAAADAAMAAAAFAAMAAAAAAAUAAAABAAEAAAABAAUAAAABAAEAAAACAAUAAAABAAEAAAADAAUAAAABAAEAAAAEAAUAAAABAAEAAAAFAAUAAAABAAEAAAAGAAUAAAABAAEAAAAHAAUAAAABAAEAAAAIAAUAAAABAAEAAAACAAQAAAADAAEAAAADAAQAAAADAAEAAAAGAAQAAAADAAEAAAAHAAQAAAADAAEAAAAAAAIAAAAHAAEAAAAAAAMAAAAHAAEAAAAAAAQAAAAHAAEAAAABAAIAAAAHAAEAAAABAAMAAAAHAAEAAAABAAQAAAAHAAEAAAAEAAIAAAAHAAEAAAAEAAMAAAAHAAEAAAAEAAQAAAAHAAEAAAAFAAIAAAAHAAEAAAAFAAMAAAAHAAEAAAAFAAQAAAAHAAEAAAAIAAIAAAAHAAEAAAAIAAMAAAAHAAEAAAAIAAQAAAAHAAEAAAACAAIAAAAHAAEAAAADAAIAAAAHAAEAAAAGAAIAAAAHAAEAAAAHAAIAAAAHAAEAAAAJAAAAAAADAAEAAAAJAAEAAAAHAAEAAAAJAAIAAAAHAAEAAAAJAAMAAAAHAAEAAAAJAAQAAAAHAAEAAAAJAAUAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_p57ef")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Platform"]
-position = Vector2(80, 83.5)
-scale = Vector2(1.8203125, 0.08593744)
-shape = SubResource("RectangleShape2D_yqjtg")
+[node name="Objects" type="Node2D" parent="."]
 
-[node name="Platform2" type="StaticBody2D" parent="Platform"]
-position = Vector2(160, 0)
+[node name="Door" parent="Objects" instance=ExtResource("3_vtaks")]
+position = Vector2(158, 70)
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform/Platform2"]
-position = Vector2(80, 82)
-texture = SubResource("AtlasTexture_lnu2h")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Platform2"]
-position = Vector2(80, 83.5)
-scale = Vector2(1.8203125, 0.08593744)
-shape = SubResource("RectangleShape2D_yqjtg")
-
-[node name="Shelf" parent="." instance=ExtResource("2_iywne")]
-position = Vector2(73, 63)
+[node name="Shelf2" parent="Objects" instance=ExtResource("2_iywne")]
+position = Vector2(78, 69)
 shelf_res = ExtResource("3_p57ef")
-texture = SubResource("AtlasTexture_p57ef")
+texture = SubResource("AtlasTexture_u5sy4")
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
-position = Vector2(9, 70)
+position = Vector2(9, 76)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -25)
+offset = Vector2(0, -30)
 script = ExtResource("5_p57ef")
 
 [node name="TopLayer" type="CanvasLayer" parent="." groups=["UI"]]
@@ -63,3 +61,5 @@ layer = 0
 
 [node name="StoragePopUp" parent="TopLayer" instance=ExtResource("5_iywne")]
 visible = false
+
+[connection signal="timeout" from="TimeManager/Timer" to="TimeManager" method="_on_timer_timeout"]

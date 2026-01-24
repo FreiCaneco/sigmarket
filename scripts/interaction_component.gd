@@ -1,16 +1,21 @@
+@tool
 extends Node2D
 
 signal player_interacted
 var player_in_area := false
 
+@export var collision_form: Shape2D
+@onready var collision_shape: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var texture_original_y = texture_rect.position.y
+
 var hover_tween: Tween
 var opacity_tween: Tween
-
 var interacting: bool = false
 
 func _ready() -> void:
+	if collision_form: 
+		collision_shape.shape = collision_form
 	set_process(false)
 
 func _process(_delta: float) -> void:
