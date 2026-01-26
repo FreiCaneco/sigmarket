@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dqgdtre7m6pyj"]
+[gd_scene load_steps=15 format=4 uid="uid://dqgdtre7m6pyj"]
 
 [ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
@@ -8,7 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://UI/storage_popup.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpj4xid3rehgd" path="res://scripts/camera.gd" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://cb580e2s642qq" path="res://scenes/day_passer.tscn" id="6_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cb580e2s642qq" path="res://scenes/time_manager.tscn" id="6_0tnpc"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0tnpc"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vtaks"]
+normal = Vector2(-1, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("2_yqjtg")
@@ -30,6 +36,20 @@ region = Rect2(39, 5, 24, 28)
 
 [node name="game" type="Node2D"]
 
+[node name="WorldBoundaries" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(0, 63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_0tnpc")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(160, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_vtaks")
+
 [node name="TimeManager" parent="." instance=ExtResource("6_0tnpc")]
 
 [node name="Timer" type="Timer" parent="TimeManager"]
@@ -50,10 +70,13 @@ shelf_res = ExtResource("3_p57ef")
 texture = SubResource("AtlasTexture_u5sy4")
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
-position = Vector2(9, 76)
+position = Vector2(79, 75)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -30)
+process_callback = 0
+limit_left = 0
+limit_right = 160
 script = ExtResource("5_p57ef")
 
 [node name="TopLayer" type="CanvasLayer" parent="." groups=["UI"]]
