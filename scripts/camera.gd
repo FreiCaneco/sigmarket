@@ -15,6 +15,7 @@ func go_to_shelf(shelf: Node2D) -> void:
 	tween.set_parallel(true)
 	tween.tween_property(self,"global_position",correct_position.global_position,1)
 	tween.tween_property(self,"zoom",Vector2(2,2),1)
+	SignalBus.camera_animation_finished.emit()
 	
 func go_to_player() -> void:
 	var tween := create_tween()
@@ -22,3 +23,4 @@ func go_to_player() -> void:
 	tween.set_parallel(true)
 	tween.tween_property(self,"global_position",Global.player.global_position,0.5)
 	tween.tween_property(self,"zoom",Vector2(1,1),0.5)
+	SignalBus.camera_animation_finished.emit()

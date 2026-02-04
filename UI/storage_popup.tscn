@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbwpbtyj2p4ef"]
+[gd_scene format=3 uid="uid://dbwpbtyj2p4ef"]
 
 [ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://assets/StoragePopUp.png" id="1_1ycag"]
 [ext_resource type="Script" uid="uid://boi4sj6q3y83u" path="res://UI/storage_popup.gd" id="1_mxshs"]
@@ -8,7 +8,7 @@
 atlas = ExtResource("1_1ycag")
 region = Rect2(0, 0, 73, 90)
 
-[node name="StoragePopUp" type="Control"]
+[node name="StoragePopUp" type="Control" unique_id=119744149]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,13 +19,13 @@ mouse_filter = 2
 script = ExtResource("1_mxshs")
 storage = ExtResource("2_b3ulc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=347465258]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AtlasTexture_mxshs")
 
-[node name="Storage" type="GridContainer" parent="."]
+[node name="Storage" type="GridContainer" parent="." unique_id=833533032]
 custom_minimum_size = Vector2(63, 63)
 layout_mode = 0
 offset_left = 5.0

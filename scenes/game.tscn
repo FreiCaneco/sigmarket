@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://dqgdtre7m6pyj"]
+[gd_scene format=4 uid="uid://dqgdtre7m6pyj"]
 
-[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/shelf.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://cgktrmvr81lli" path="res://scenes/objects/shelf.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c1wn5lb2nvrks" path="res://assets/TILES.png" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://byiqu0pfnpedl" path="res://resources/shelfs/two_by_two.tres" id="3_p57ef"]
-[ext_resource type="PackedScene" uid="uid://rx3ig8oe2u7s" path="res://scenes/door.tscn" id="3_vtaks"]
+[ext_resource type="PackedScene" uid="uid://rx3ig8oe2u7s" path="res://scenes/objects/door.tscn" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://UI/storage_popup.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpj4xid3rehgd" path="res://scripts/camera.gd" id="5_p57ef"]
@@ -34,55 +34,56 @@ sources/0 = SubResource("TileSetAtlasSource_u5sy4")
 atlas = ExtResource("4_u5sy4")
 region = Rect2(39, 5, 24, 28)
 
-[node name="game" type="Node2D"]
+[node name="game" type="Node2D" unique_id=1460564849]
 
-[node name="WorldBoundaries" type="Node" parent="."]
+[node name="WorldBoundaries" type="Node" parent="." unique_id=1573914063]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WorldBoundaries"]
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBoundaries" unique_id=385994282]
 position = Vector2(0, 63)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D" unique_id=21593672]
 shape = SubResource("WorldBoundaryShape2D_0tnpc")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBoundaries"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBoundaries" unique_id=1050027980]
 position = Vector2(160, 61)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D2" unique_id=1390365903]
 shape = SubResource("WorldBoundaryShape2D_vtaks")
 
-[node name="TimeManager" parent="." instance=ExtResource("6_0tnpc")]
+[node name="TimeManager" parent="." unique_id=1465582210 instance=ExtResource("6_0tnpc")]
 
-[node name="Timer" type="Timer" parent="TimeManager"]
+[node name="Timer" type="Timer" parent="TimeManager" unique_id=673823292]
 wait_time = 5.0
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1421652556]
 tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAAAAAADAAEAAAACAAAAAAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAHAAAAAAADAAEAAAAIAAAAAAADAAEAAAAAAAEAAAAHAAEAAAABAAEAAAAHAAEAAAACAAEAAAAHAAEAAAADAAEAAAAHAAEAAAAEAAEAAAAHAAEAAAAFAAEAAAAHAAEAAAAGAAEAAAAHAAEAAAAHAAEAAAAHAAEAAAAIAAEAAAAHAAEAAAACAAMAAAADAAMAAAAHAAMAAAAFAAMAAAAGAAMAAAADAAMAAAADAAMAAAAFAAMAAAAAAAUAAAABAAEAAAABAAUAAAABAAEAAAACAAUAAAABAAEAAAADAAUAAAABAAEAAAAEAAUAAAABAAEAAAAFAAUAAAABAAEAAAAGAAUAAAABAAEAAAAHAAUAAAABAAEAAAAIAAUAAAABAAEAAAACAAQAAAADAAEAAAADAAQAAAADAAEAAAAGAAQAAAADAAEAAAAHAAQAAAADAAEAAAAAAAIAAAAHAAEAAAAAAAMAAAAHAAEAAAAAAAQAAAAHAAEAAAABAAIAAAAHAAEAAAABAAMAAAAHAAEAAAABAAQAAAAHAAEAAAAEAAIAAAAHAAEAAAAEAAMAAAAHAAEAAAAEAAQAAAAHAAEAAAAFAAIAAAAHAAEAAAAFAAMAAAAHAAEAAAAFAAQAAAAHAAEAAAAIAAIAAAAHAAEAAAAIAAMAAAAHAAEAAAAIAAQAAAAHAAEAAAACAAIAAAAHAAEAAAADAAIAAAAHAAEAAAAGAAIAAAAHAAEAAAAHAAIAAAAHAAEAAAAJAAAAAAADAAEAAAAJAAEAAAAHAAEAAAAJAAIAAAAHAAEAAAAJAAMAAAAHAAEAAAAJAAQAAAAHAAEAAAAJAAUAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_p57ef")
 
-[node name="Objects" type="Node2D" parent="."]
+[node name="Objects" type="Node2D" parent="." unique_id=1269618912]
 
-[node name="Door" parent="Objects" instance=ExtResource("3_vtaks")]
+[node name="Door" parent="Objects" unique_id=1448394153 instance=ExtResource("3_vtaks")]
 position = Vector2(158, 70)
 
-[node name="Shelf2" parent="Objects" instance=ExtResource("2_iywne")]
+[node name="Shelf2" parent="Objects" unique_id=135415382 instance=ExtResource("2_iywne")]
 position = Vector2(78, 69)
 shelf_res = ExtResource("3_p57ef")
 texture = SubResource("AtlasTexture_u5sy4")
 
-[node name="Player" parent="." instance=ExtResource("2_lnu2h")]
+[node name="Player" parent="." unique_id=957031606 instance=ExtResource("2_lnu2h")]
+z_index = 3
 position = Vector2(79, 75)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=74619994]
 offset = Vector2(0, -30)
 process_callback = 0
 limit_left = 0
 limit_right = 160
 script = ExtResource("5_p57ef")
 
-[node name="TopLayer" type="CanvasLayer" parent="." groups=["UI"]]
+[node name="TopLayer" type="CanvasLayer" parent="." unique_id=187582112 groups=["UI"]]
 layer = 0
 
-[node name="StoragePopUp" parent="TopLayer" instance=ExtResource("5_iywne")]
+[node name="StoragePopUp" parent="TopLayer" unique_id=1090629977 instance=ExtResource("5_iywne")]
 visible = false
 
 [connection signal="timeout" from="TimeManager/Timer" to="TimeManager" method="_on_timer_timeout"]
