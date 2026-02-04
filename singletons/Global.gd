@@ -5,6 +5,11 @@ enum period_cycle {
 	NIGHT
 }
 
+enum cam_anim_type {
+	GO_TO_SHELF,
+	GO_TO_PLAYER
+}
+
 var cam: Camera2D
 var player: Node2D
 var current_day: int = 1

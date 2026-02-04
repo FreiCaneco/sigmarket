@@ -14,7 +14,7 @@ var ui_canvas: CanvasLayer
 var slots_grid: GridContainer
 
 func _ready() -> void:
-	SignalBus.player_stopped_interacting.connect(_on_player_stopped_interaction)
+	SignalBus.camera_animation_finished.connect(_on_camera_finished_animation)
 	ui_canvas = get_tree().get_first_node_in_group("UI")
 	if texture:
 		sprite_2d.texture = texture
@@ -37,7 +37,7 @@ func _process(_delta: float) -> void:
 		var grid_offset = Vector2(-9,-12)
 		slots_grid.global_position = (shelf_screen_pos + (grid_offset * z))
 		slots_grid.scale = Vector2(1, 1)
-		
+
 
 func add_slots_based_on_type() -> void:
 	slots_grid = GridContainer.new()
@@ -60,7 +60,10 @@ func add_slots_based_on_type() -> void:
 
 func _on_player_interaction() -> void:
 	SignalBus.shelf_interacted.emit(self)
-	slots_grid.reparent(ui_canvas)
 
-func _on_player_stopped_interaction() -> void:
-	slots_grid.reparent(self)
+
+func _on_camera_finished_animation(anim_type: Global.cam_anim_type)-> void:
+	if anim_type == Global.cam_anim_type.GO_TO_SHELF:
+		slots_grid.reparent(ui_canvas)
+	elif anim_type == Global.cam_anim_type.GO_TO_PLAYER:
+		slots_grid.reparent(self)
