@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Inventory" format=3 uid="uid://ds3ouncldtrxf"]
+
+[ext_resource type="Script" uid="uid://ggeuckxrh3si" path="res://scripts/resources/item_resource.gd" id="1_g38mp"]
+[ext_resource type="Resource" uid="uid://cn8wgtqxabae5" path="res://scripts/resources/items/apple.tres" id="2_ebv5h"]
+[ext_resource type="Resource" uid="uid://b2pf0ocqxbpyu" path="res://scripts/resources/items/carrot.tres" id="3_2gedv"]
+[ext_resource type="Script" uid="uid://ds5vx758p2bic" path="res://scripts/resources/inventory.gd" id="3_rycbr"]
+[ext_resource type="Resource" uid="uid://cm32miijklbth" path="res://scripts/resources/items/pineapple.tres" id="4_b2vut"]
+[ext_resource type="Resource" uid="uid://cxx046m5tmmyy" path="res://scripts/resources/items/green_apple.tres" id="5_2gedv"]
+
+[resource]
+script = ExtResource("3_rycbr")
+items = Array[ExtResource("1_g38mp")]([ExtResource("2_ebv5h"), ExtResource("3_2gedv"), ExtResource("4_b2vut"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ExtResource("5_2gedv")])
+metadata/_custom_type_script = "uid://ds5vx758p2bic"

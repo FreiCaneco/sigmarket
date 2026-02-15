@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://b2pf0ocqxbpyu"]
+
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://assets/items6x6.png" id="1_tqcif"]
+[ext_resource type="Script" uid="uid://ggeuckxrh3si" path="res://scripts/resources/item_resource.gd" id="2_bsa5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0x02"]
+atlas = ExtResource("1_tqcif")
+region = Rect2(72, 40, 8, 8)
+
+[resource]
+script = ExtResource("2_bsa5t")
+item_name = "Carrot"
+item_texture = SubResource("AtlasTexture_p0x02")
+metadata/_custom_type_script = "uid://ggeuckxrh3si"

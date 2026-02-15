@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cljhuqxxmd762"]
+[gd_scene format=3 uid="uid://cljhuqxxmd762"]
 
-[ext_resource type="Script" uid="uid://cn4hukybb81m" path="res://UI/main_menu.gd" id="1_d8nwk"]
-[ext_resource type="Texture2D" uid="uid://44ydh61tsofh" path="res://assets/buttons.png" id="1_p8ccj"]
-[ext_resource type="Texture2D" uid="uid://dki4m7wm2urtd" path="res://assets/main_menu.png" id="1_tk8dj"]
+[ext_resource type="Script" uid="uid://cn4hukybb81m" path="res://ui/main_menu.gd" id="1_d8nwk"]
+[ext_resource type="Texture2D" uid="uid://44ydh61tsofh" path="res://assets/UI/buttons.png" id="1_p8ccj"]
+[ext_resource type="Texture2D" uid="uid://dki4m7wm2urtd" path="res://assets/UI/main_menu.png" id="1_tk8dj"]
+[ext_resource type="AudioStream" uid="uid://dowla5uouenxk" path="res://sfx/sigmarket_theme.wav" id="4_4cwpn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8ccj"]
 atlas = ExtResource("1_p8ccj")
@@ -36,7 +37,7 @@ region_rect = Rect2(112, 46, 32, 9)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk8dj"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=274270426]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d8nwk")
 
-[node name="MainMenu" type="TextureRect" parent="."]
+[node name="MainMenu" type="TextureRect" parent="." unique_id=67710467]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tk8dj")
 
-[node name="Ropes" type="TextureRect" parent="."]
+[node name="Ropes" type="TextureRect" parent="." unique_id=651865413]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -70,7 +71,7 @@ grow_vertical = 2
 texture = SubResource("AtlasTexture_p8ccj")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=257617685]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.96875
@@ -85,7 +86,7 @@ grow_horizontal = 0
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=36202910]
 custom_minimum_size = Vector2(32, 9)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_tk8dj")
@@ -93,12 +94,16 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_f40uw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_d8nwk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p8ccj")
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=92109051]
 custom_minimum_size = Vector2(32, 9)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_p8ccj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ctay")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4cwpn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tk8dj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=439462149]
+stream = ExtResource("4_4cwpn")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

@@ -16,7 +16,7 @@ func close_storage():
 	self.visible = false
 
 func load_item_slots() -> void:
-	var item = preload("res://scenes/item.tscn")
+	var item = preload("res://scenes/objects/item.tscn")
 	for i in range(storage.items.size()):
 		var item_instance = item.instantiate()
 		item_instance.item_res = storage.items[i]

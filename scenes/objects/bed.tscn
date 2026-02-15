@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0sje20pceqvf"]
 
-[ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://scenes/interaction_component.tscn" id="1_fqty4"]
+[ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://scenes/utilities/interaction_component.tscn" id="1_fqty4"]
 [ext_resource type="Script" uid="uid://c23ythw6aklfx" path="res://scripts/objects/bed.gd" id="1_raxto"]
 [ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="2_raxto"]
 

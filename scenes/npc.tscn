@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dayhkesrhriyt"]
+
+[ext_resource type="Texture2D" uid="uid://56nronqkmew3" path="res://assets/NPCS/Jackson.png" id="1_nh2m4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abqhh"]
+size = Vector2(8, 15)
+
+[sub_resource type="Animation" id="Animation_rv78h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7n8xq"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_4wlns"]
+resource_name = "move"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tl2vt"]
+_data = {
+&"RESET": SubResource("Animation_rv78h"),
+&"idle": SubResource("Animation_7n8xq"),
+&"move": SubResource("Animation_4wlns")
+}
+
+[node name="NPCs" type="CharacterBody2D" unique_id=818594021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=915144012]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_abqhh")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1613306485]
+texture = ExtResource("1_nh2m4")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=349615596]
+root_node = NodePath("../Sprite")
+libraries/ = SubResource("AnimationLibrary_tl2vt")

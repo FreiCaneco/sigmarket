@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cd77unlfb2qob"]
+
+[ext_resource type="Script" uid="uid://b8wkkbwecvghs" path="res://scripts/objects/cash_register.gd" id="1_hwn8j"]
+[ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://scenes/utilities/interaction_component.tscn" id="1_y1m4j"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://assets/builds.png" id="2_hwn8j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0oe32"]
+size = Vector2(22, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nx6g"]
+atlas = ExtResource("2_hwn8j")
+region = Rect2(65, 17, 22, 16)
+
+[node name="CashRegister" type="Node2D" unique_id=410155840]
+script = ExtResource("1_hwn8j")
+
+[node name="InteractionComponent" parent="." unique_id=1528382468 instance=ExtResource("1_y1m4j")]
+collision_form = SubResource("RectangleShape2D_0oe32")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=657460445]
+texture = SubResource("AtlasTexture_6nx6g")
+
+[connection signal="player_interacted" from="InteractionComponent" to="." method="_on_interaction_component_player_interacted"]

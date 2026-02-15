@@ -12,6 +12,7 @@ extends Node2D
 
 var ui_canvas: CanvasLayer
 var slots_grid: GridContainer
+var slots_grid_original_pos: Vector2
 
 func _ready() -> void:
 	SignalBus.camera_animation_finished.connect(_on_camera_finished_animation)
@@ -22,22 +23,14 @@ func _ready() -> void:
 	add_slots_based_on_type()
 
 func _process(_delta: float) -> void:
+	
 	if slots_grid and slots_grid.visible and slots_grid.get_parent() == ui_canvas:
-		
 		var shelf_screen_pos = get_global_transform_with_canvas().origin
 		var z = Global.cam.zoom.x
 		# Precisa transformar isso em dinâmico
 		var grid_offset = Vector2(-9, -12)
-		
 		slots_grid.global_position = (shelf_screen_pos + (grid_offset * z))
 		slots_grid.scale = Vector2(z, z)
-	else:
-		var shelf_screen_pos = get_global_transform().origin
-		var z = Global.cam.zoom.x
-		var grid_offset = Vector2(-9,-12)
-		slots_grid.global_position = (shelf_screen_pos + (grid_offset * z))
-		slots_grid.scale = Vector2(1, 1)
-
 
 func add_slots_based_on_type() -> void:
 	slots_grid = GridContainer.new()
@@ -53,6 +46,7 @@ func add_slots_based_on_type() -> void:
 			slots_grid.columns = 2
 			slots_grid.size = Vector2(18,18)
 			slots_grid.position = Vector2(-9,-12)
+			slots_grid_original_pos = slots_grid.position
 			numOfSlots = 4
 			for i in range(numOfSlots):
 				var new_item = item.instantiate()
@@ -61,9 +55,9 @@ func add_slots_based_on_type() -> void:
 func _on_player_interaction() -> void:
 	SignalBus.shelf_interacted.emit(self)
 
-
 func _on_camera_finished_animation(anim_type: Global.cam_anim_type)-> void:
 	if anim_type == Global.cam_anim_type.GO_TO_SHELF:
-		slots_grid.reparent(ui_canvas)
-	elif anim_type == Global.cam_anim_type.GO_TO_PLAYER:
-		slots_grid.reparent(self)
+		slots_grid.reparent(ui_canvas,false)
+	if anim_type == Global.cam_anim_type.GO_TO_PLAYER:
+		slots_grid.reparent(self,true)
+		slots_grid.position = slots_grid_original_pos
