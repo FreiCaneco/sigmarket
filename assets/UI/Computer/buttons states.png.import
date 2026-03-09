@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc1mpottgto6l"
-path="res://.godot/imported/jackson.png-35bb57114bdd5c28a1e4c4da9284b743.ctex"
+uid="uid://dp2mcs1fuara"
+path="res://.godot/imported/buttons states.png-5856e1f4261775c8ff5fb7fde3cd3b11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCS/jackson.png"
-dest_files=["res://.godot/imported/jackson.png-35bb57114bdd5c28a1e4c4da9284b743.ctex"]
+source_file="res://assets/UI/Computer/buttons states.png"
+dest_files=["res://.godot/imported/buttons states.png-5856e1f4261775c8ff5fb7fde3cd3b11.ctex"]
 
 [params]
 

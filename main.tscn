@@ -3,11 +3,30 @@
 [ext_resource type="Script" uid="uid://ho2wqtonona1" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://cljhuqxxmd762" path="res://ui/main_menu.tscn" id="1_o5qli"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=359154907]
 script = ExtResource("1_0wfyh")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=424833605]
+custom_minimum_size = Vector2(320, 180)
+offset_right = 320.0
+offset_bottom = 180.0
+stretch = true
+stretch_shrink = 2
 
-[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("1_o5qli")]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=717937472]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(160, 90)
+render_target_update_mode = 4
 
-[connection signal="play_pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_play_pressed"]
+[node name="MainMenu" parent="SubViewportContainer/SubViewport" unique_id=274270426 instance=ExtResource("1_o5qli")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2145729084]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1460236171]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

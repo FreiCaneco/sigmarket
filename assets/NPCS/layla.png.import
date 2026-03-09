@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc1mpottgto6l"
-path="res://.godot/imported/jackson.png-35bb57114bdd5c28a1e4c4da9284b743.ctex"
+uid="uid://jptxjeaqkoro"
+path="res://.godot/imported/layla.png-5b06d87192adf2fff19d432ea1b88e84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCS/jackson.png"
-dest_files=["res://.godot/imported/jackson.png-35bb57114bdd5c28a1e4c4da9284b743.ctex"]
+source_file="res://assets/NPCS/layla.png"
+dest_files=["res://.godot/imported/layla.png-5b06d87192adf2fff19d432ea1b88e84.ctex"]
 
 [params]
 

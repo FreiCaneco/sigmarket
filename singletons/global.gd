@@ -16,4 +16,4 @@ var player: Node2D
 var current_day: int = 1
 var current_period: period_cycle
 
-var final_pixel_pos: Vector2 = Vector2(320,0)
+var final_pixel_pos: Vector2 = Vector2(160,0)

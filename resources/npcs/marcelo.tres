@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NpcResource" format=3 uid="uid://dphfn6vwuqagx"]
+
+[ext_resource type="Script" uid="uid://wbhatufuvp7x" path="res://resources/npc_resource.gd" id="1_iqpeh"]
+[ext_resource type="Texture2D" uid="uid://bo3xwdiw1q2lx" path="res://assets/NPCS/marcelo.png" id="1_t0tv1"]
+
+[resource]
+script = ExtResource("1_iqpeh")
+npc_name = "Marcelo"
+npc_sprite = ExtResource("1_t0tv1")
+metadata/_custom_type_script = "uid://wbhatufuvp7x"
