@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bll6cjo41hwwv"]
 
-[sub_resource type="Image" id="Image_6j3br"]
+[sub_resource type="Image" id="Image_i5s37"]
 data = {
 "data": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
 "format": "RGBA8",
@@ -10,7 +10,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_pja6h"]
-image = SubResource("Image_6j3br")
+image = SubResource("Image_i5s37")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd30k"]
 content_margin_left = 4.0

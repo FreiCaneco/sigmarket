@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://d2igbxkdnor2r"]
 
-[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://ui/themes/computer_screen.tres" id="1_47hgd"]
-[ext_resource type="Script" uid="uid://cqnsidu2lawrn" path="res://ui/computer_screen.gd" id="2_lsalw"]
-[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://ui/themes/sidebar.tres" id="2_o3n22"]
+[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://UI/themes/computer_screen.tres" id="1_47hgd"]
+[ext_resource type="Script" uid="uid://cqnsidu2lawrn" path="res://UI/computer_screen.gd" id="2_lsalw"]
+[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://UI/themes/sidebar.tres" id="2_o3n22"]
 [ext_resource type="Texture2D" uid="uid://bawikduwcx4lo" path="res://assets/UI/Computer/shop menu one sprite.png" id="2_u32o4"]
 [ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://assets/UI/Computer/secret shop icon.png" id="3_t2qnb"]
-[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://ui/themes/empty_panel.tres" id="4_4byhf"]
+[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://UI/themes/empty_panel.tres" id="4_4byhf"]
 [ext_resource type="Texture2D" uid="uid://dp2mcs1fuara" path="res://assets/UI/Computer/buttons states.png" id="6_2qn32"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u32o4"]

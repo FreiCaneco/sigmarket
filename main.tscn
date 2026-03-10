@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://berxkukq286iq"]
 
 [ext_resource type="Script" uid="uid://ho2wqtonona1" path="res://scripts/main.gd" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://cljhuqxxmd762" path="res://ui/main_menu.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cljhuqxxmd762" path="res://UI/main_menu.tscn" id="1_o5qli"]
 
 [node name="Main" type="Node2D" unique_id=359154907]
 script = ExtResource("1_0wfyh")
@@ -30,3 +30,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[connection signal="play_pressed" from="SubViewportContainer/SubViewport/MainMenu" to="." method="_on_main_menu_play_pressed"]
