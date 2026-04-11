@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://d3ixpwkk7a7ok" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_4acdr"]
 [ext_resource type="FontFile" uid="uid://bs5xbq3ejxf53" path="res://assets/fonts/pixel.ttf" id="1_7sekd"]
-[ext_resource type="Texture2D" uid="uid://cyopmruv6ya51" path="res://assets/UI/Computer/selected shop category.png" id="1_wwcw5"]
+[ext_resource type="Texture2D" uid="uid://cyopmruv6ya51" path="res://assets/UI/computer/selected shop category.png" id="1_wwcw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwcw5"]
 content_margin_left = 4.0
@@ -122,6 +122,10 @@ Button/styles/focus = SubResource("StyleBoxFlat_7sekd")
 Button/styles/hover = SubResource("StyleBoxFlat_thap8")
 Button/styles/normal = SubResource("StyleBoxFlat_bbe0o")
 Button/styles/pressed = SubResource("StyleBoxFlat_vdvie")
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 14
+MarginContainer/constants/margin_right = 14
+MarginContainer/constants/margin_top = 14
 TabContainer/colors/drop_mark_color = Color(1, 1, 1, 1)
 TabContainer/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 TabContainer/colors/font_hovered_color = Color(0.95, 0.95, 0.95, 1)

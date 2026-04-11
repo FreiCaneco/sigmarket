@@ -1,6 +1,5 @@
 extends Node2D
 
-# Adicionar uma seção ao interagir simplesmente isso
 @onready var sections = get_tree().get_first_node_in_group("Sections")
 
 func add_section() -> void:
@@ -12,6 +11,5 @@ func add_section() -> void:
 	SignalBus.last_pixel_changed.emit()
 	sections.add_child(section)
 
-
 func _on_interaction_component_player_interacted() -> void:
-	add_section()
+	SignalBus.computer_interacted.emit()

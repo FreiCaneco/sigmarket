@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://d2igbxkdnor2r"]
 
-[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://UI/themes/computer_screen.tres" id="1_47hgd"]
-[ext_resource type="Script" uid="uid://cqnsidu2lawrn" path="res://UI/computer_screen.gd" id="2_lsalw"]
-[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://UI/themes/sidebar.tres" id="2_o3n22"]
-[ext_resource type="Texture2D" uid="uid://bawikduwcx4lo" path="res://assets/UI/Computer/shop menu one sprite.png" id="2_u32o4"]
-[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://assets/UI/Computer/secret shop icon.png" id="3_t2qnb"]
-[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://UI/themes/empty_panel.tres" id="4_4byhf"]
-[ext_resource type="Texture2D" uid="uid://dp2mcs1fuara" path="res://assets/UI/Computer/buttons states.png" id="6_2qn32"]
+[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://ui/themes/computer_screen.tres" id="1_47hgd"]
+[ext_resource type="Script" uid="uid://cqnsidu2lawrn" path="res://ui/computer_screen.gd" id="2_lsalw"]
+[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://ui/themes/sidebar.tres" id="2_o3n22"]
+[ext_resource type="Texture2D" uid="uid://dfn7x5uxouv5x" path="res://assets/UI/computer/empty_shop_menu.png" id="2_u32o4"]
+[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://assets/UI/computer/secret shop icon.png" id="3_t2qnb"]
+[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://ui/themes/empty_panel.tres" id="4_4byhf"]
+[ext_resource type="Texture2D" uid="uid://dp2mcs1fuara" path="res://assets/UI/computer/buttons states.png" id="6_2qn32"]
+[ext_resource type="Texture2D" uid="uid://sjo2ua5o2l5u" path="res://assets/UI/computer/menu loja.png" id="7_lsalw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u32o4"]
 texture = ExtResource("2_u32o4")
@@ -161,10 +162,12 @@ texture = ExtResource("2_u32o4")
 region_rect = Rect2(45, 0, 242, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u32o4"]
-atlas = ExtResource("2_u32o4")
+atlas = ExtResource("7_lsalw")
 region = Rect2(287, 0, 33, 180)
 
-[node name="ComputerScreen" type="MarginContainer" unique_id=407213244]
+[node name="ComputerScreen" type="Control" unique_id=1224048351]
+process_mode = 3
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -174,7 +177,9 @@ theme = ExtResource("1_47hgd")
 script = ExtResource("2_lsalw")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=11702789]
-layout_mode = 2
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
 theme_override_constants/separation = 0
 
 [node name="SideBar" type="PanelContainer" parent="HBoxContainer" unique_id=858053649]
@@ -331,7 +336,6 @@ layout_mode = 2
 size_flags_vertical = 8
 current_tab = 0
 clip_tabs = false
-tab_0/title = "AREAS"
 tab_1/title = "ITEMS"
 tab_2/title = "UPGRADES"
 tab_3/icon = ExtResource("3_t2qnb")
@@ -340,7 +344,15 @@ tab_3/icon = ExtResource("3_t2qnb")
 layout_mode = 2
 theme = ExtResource("4_4byhf")
 metadata/_tab_index = 0
-metadata/_tab_name = "AREAS"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TabHolder/TabContainer/Areas" unique_id=1386345820]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/TabHolder/TabContainer/Areas/MarginContainer" unique_id=1100928655]
+layout_mode = 2
+theme_override_constants/h_separation = 19
+theme_override_constants/v_separation = 19
+columns = 2
 
 [node name="Itens" type="PanelContainer" parent="HBoxContainer/TabHolder/TabContainer" unique_id=44363518]
 visible = false
@@ -349,12 +361,24 @@ theme = ExtResource("4_4byhf")
 metadata/_tab_index = 1
 metadata/_tab_name = "ITEMS"
 
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TabHolder/TabContainer/Itens" unique_id=387815056]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/TabHolder/TabContainer/Itens/MarginContainer" unique_id=2074695704]
+layout_mode = 2
+
 [node name="Upgrades" type="PanelContainer" parent="HBoxContainer/TabHolder/TabContainer" unique_id=751945471]
 visible = false
 layout_mode = 2
 theme = ExtResource("4_4byhf")
 metadata/_tab_index = 2
 metadata/_tab_name = "UPGRADES"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TabHolder/TabContainer/Upgrades" unique_id=1048204525]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/TabHolder/TabContainer/Upgrades/MarginContainer" unique_id=1891356651]
+layout_mode = 2
 
 [node name="SecretShop" type="PanelContainer" parent="HBoxContainer/TabHolder/TabContainer" unique_id=1733661493]
 visible = false

@@ -7,3 +7,4 @@ signal bed_interacted
 signal door_interacted
 signal player_stopped_interacting
 signal last_pixel_changed
+signal computer_interacted

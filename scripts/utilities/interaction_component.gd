@@ -18,7 +18,7 @@ func _ready() -> void:
 		collision_shape.shape = collision_form
 	set_process(false)
 
-func _process(_delta: float) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		player_interacted.emit()
 		interaction_animation()

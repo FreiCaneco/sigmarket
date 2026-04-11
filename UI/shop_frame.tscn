@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ckwqu2plem2y2"]
+
+[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://assets/UI/computer/componentes_ui_site.png" id="1_54tka"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54tka"]
+texture = ExtResource("1_54tka")
+region_rect = Rect2(263, 36, 39, 35)
+
+[node name="ShopItemFrame" type="PanelContainer" unique_id=842996743]
+custom_minimum_size = Vector2(39, 35)
+offset_right = 39.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_54tka")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=215117774]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

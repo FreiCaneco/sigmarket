@@ -3,7 +3,7 @@ extends Node2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var camera_position: Marker2D = $CameraPosition
 
-@export var shelf_res: ShelfResource
+@export var shelf_res: ShelfTypeResource
 @export var texture: AtlasTexture:
 	set(value):
 		texture = value
@@ -35,7 +35,7 @@ func _process(_delta: float) -> void:
 func add_slots_based_on_type() -> void:
 	slots_grid = GridContainer.new()
 	add_child(slots_grid)
-	var item = load("res://scenes/item.tscn")
+	var item = load("res://scenes/objects/item.tscn")
 	var numOfSlots: int
 	slots_grid.add_theme_constant_override("h_separation",2)
 	slots_grid.add_theme_constant_override("v_separation",2)

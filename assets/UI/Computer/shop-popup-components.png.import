@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8cfqoqfrpesc"
-path="res://.godot/imported/secret shop icon.png-ff1157df511325996b61211d7f2ca413.ctex"
+uid="uid://bsiuehb8jc541"
+path="res://.godot/imported/shop-popup-components.png-5420bc36c56607b067b1fa97cc2466f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/computer/secret shop icon.png"
-dest_files=["res://.godot/imported/secret shop icon.png-ff1157df511325996b61211d7f2ca413.ctex"]
+source_file="res://assets/UI/computer/shop-popup-components.png"
+dest_files=["res://.godot/imported/shop-popup-components.png-5420bc36c56607b067b1fa97cc2466f0.ctex"]
 
 [params]
 
