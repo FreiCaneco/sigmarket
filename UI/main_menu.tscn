@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cljhuqxxmd762"]
 
-[ext_resource type="Script" uid="uid://cn4hukybb81m" path="res://ui/main_menu.gd" id="1_d8nwk"]
-[ext_resource type="Texture2D" uid="uid://44ydh61tsofh" path="res://assets/UI/buttons.png" id="1_p8ccj"]
-[ext_resource type="Texture2D" uid="uid://dki4m7wm2urtd" path="res://assets/UI/main_menu.png" id="1_tk8dj"]
-[ext_resource type="AudioStream" uid="uid://dowla5uouenxk" path="res://sfx/sigmarket_theme.wav" id="4_4cwpn"]
+[ext_resource type="Script" uid="uid://bsox0je7a4v42" path="res://Ui/Scripts/MainMenu.cs" id="1_6d8qd"]
+[ext_resource type="Texture2D" uid="uid://44ydh61tsofh" path="res://Ui/Sprites/buttons.png" id="1_p8ccj"]
+[ext_resource type="Texture2D" uid="uid://dki4m7wm2urtd" path="res://Ui/Sprites/main_menu.png" id="1_tk8dj"]
+[ext_resource type="AudioStream" uid="uid://dowla5uouenxk" path="res://Shared/Sfx/sigmarket_theme.wav" id="4_4cwpn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8ccj"]
 atlas = ExtResource("1_p8ccj")
@@ -50,7 +50,7 @@ offset_right = 80.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_d8nwk")
+script = ExtResource("1_6d8qd")
 
 [node name="MainMenu" type="TextureRect" parent="." unique_id=67710467]
 layout_mode = 1
@@ -115,5 +115,3 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_tk8dj")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=439462149]
 stream = ExtResource("4_4cwpn")
 autoplay = true
-
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

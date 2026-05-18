@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d2igbxkdnor2r"]
 
-[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://ui/themes/computer_screen.tres" id="1_47hgd"]
-[ext_resource type="Script" uid="uid://cqnsidu2lawrn" path="res://ui/computer_screen.gd" id="2_lsalw"]
-[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://ui/themes/sidebar.tres" id="2_o3n22"]
-[ext_resource type="Texture2D" uid="uid://dfn7x5uxouv5x" path="res://assets/UI/computer/empty_shop_menu.png" id="2_u32o4"]
-[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://assets/UI/computer/secret shop icon.png" id="3_t2qnb"]
-[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://ui/themes/empty_panel.tres" id="4_4byhf"]
-[ext_resource type="Texture2D" uid="uid://dp2mcs1fuara" path="res://assets/UI/computer/buttons states.png" id="6_2qn32"]
-[ext_resource type="Texture2D" uid="uid://sjo2ua5o2l5u" path="res://assets/UI/computer/menu loja.png" id="7_lsalw"]
+[ext_resource type="Theme" uid="uid://cm7khp4vvje5b" path="res://Ui/Themes/computer_screen.tres" id="1_47hgd"]
+[ext_resource type="Script" uid="uid://b525rorcix6ly" path="res://Ui/Scripts/ComputerScreen.cs" id="2_lf1q6"]
+[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://Ui/Themes/sidebar.tres" id="2_o3n22"]
+[ext_resource type="Texture2D" uid="uid://dfn7x5uxouv5x" path="res://Ui/Sprites/computer/empty_shop_menu.png" id="2_u32o4"]
+[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://Ui/Sprites/computer/secret shop icon.png" id="3_t2qnb"]
+[ext_resource type="Theme" uid="uid://cge1i7vda0xuy" path="res://Ui/Themes/empty_panel.tres" id="4_4byhf"]
+[ext_resource type="Texture2D" uid="uid://dp2mcs1fuara" path="res://Ui/Sprites/computer/buttons states.png" id="6_2qn32"]
+[ext_resource type="Texture2D" uid="uid://sjo2ua5o2l5u" path="res://Ui/Sprites/computer/menu loja.png" id="7_lsalw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u32o4"]
 texture = ExtResource("2_u32o4")
@@ -165,7 +165,7 @@ region_rect = Rect2(45, 0, 242, 180)
 atlas = ExtResource("7_lsalw")
 region = Rect2(287, 0, 33, 180)
 
-[node name="ComputerScreen" type="Control" unique_id=1224048351]
+[node name="ComputerScreen" type="Control" unique_id=1224048351 node_paths=PackedStringArray("TabsContainer")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -174,7 +174,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_47hgd")
-script = ExtResource("2_lsalw")
+script = ExtResource("2_lf1q6")
+TabsContainer = NodePath("HBoxContainer/TabHolder/TabContainer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=11702789]
 layout_mode = 0

@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="sigmarket"
 run/main_scene="uid://berxkukq286iq"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 
 [audio]
 
@@ -24,14 +24,13 @@ buses/default_bus_layout="uid://ew58xvglreg7"
 
 [autoload]
 
-SignalBus="*res://singletons/signal_bus.gd"
-Global="*uid://chvtpbhsrxg7q"
+SignalBus="*uid://ce6swbpvv3dpu"
+GlobalData="*uid://d3v02ensujp83"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -41,6 +40,10 @@ window/vsync/vsync_mode=0
 [dotnet]
 
 project/assembly_name="sigmarket"
+
+[global_group]
+
+Camera=""
 
 [input]
 

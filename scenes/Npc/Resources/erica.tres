@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NpcData" format=3 uid="uid://oigefn310mu7"]
+
+[ext_resource type="Texture2D" uid="uid://jj7wvsxo3dfx" path="res://Scenes/Npc/Sprites/erica.png" id="1_w3cbk"]
+[ext_resource type="Script" uid="uid://c6jhlpb4wxx60" path="res://Scenes/Npc/NpcData.cs" id="2_oeqwv"]
+
+[resource]
+script = ExtResource("2_oeqwv")
+NpcName = "Erica"
+NpcSprite = ExtResource("1_w3cbk")
+metadata/_custom_type_script = "uid://wbhatufuvp7x"

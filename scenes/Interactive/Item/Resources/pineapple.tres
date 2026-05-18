@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://cm32miijklbth"]
+
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://Scenes/Interactive/Item/items6x6.png" id="1_chiwj"]
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Interactive/Item/ItemResource.cs" id="2_i2key"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iynx"]
+atlas = ExtResource("1_chiwj")
+region = Rect2(72, 32, 8, 8)
+
+[resource]
+script = ExtResource("2_i2key")
+ItemName = "Pineapple"
+ItemTexture = SubResource("AtlasTexture_8iynx")
+metadata/_custom_type_script = "uid://ggeuckxrh3si"
