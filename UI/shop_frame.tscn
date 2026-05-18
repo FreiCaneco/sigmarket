@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckwqu2plem2y2"]
 
-[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://assets/UI/computer/componentes_ui_site.png" id="1_54tka"]
+[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="1_54tka"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54tka"]
 texture = ExtResource("1_54tka")

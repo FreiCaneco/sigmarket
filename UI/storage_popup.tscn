@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dbwpbtyj2p4ef"]
 
-[ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://assets/UI/StoragePopUp.png" id="1_1ycag"]
-[ext_resource type="Script" uid="uid://boi4sj6q3y83u" path="res://ui/storage_popup.gd" id="1_mxshs"]
-[ext_resource type="Resource" uid="uid://ds3ouncldtrxf" path="res://resources/storage.tres" id="2_b3ulc"]
+[ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://Ui/Sprites/StoragePopUp.png" id="1_1ycag"]
+[ext_resource type="Script" uid="uid://d4a1a01g3mi32" path="res://Ui/Scripts/StoragePopup.cs" id="1_1ycny"]
+[ext_resource type="Resource" uid="uid://ds3ouncldtrxf" path="res://Systems/Inventory/storage.tres" id="2_b3ulc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxshs"]
 atlas = ExtResource("1_1ycag")
@@ -16,8 +16,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_mxshs")
-storage = ExtResource("2_b3ulc")
+script = ExtResource("1_1ycny")
+Storage = ExtResource("2_b3ulc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=347465258]
 layout_mode = 0

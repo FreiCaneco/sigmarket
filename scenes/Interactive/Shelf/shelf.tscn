@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cgktrmvr81lli"]
+
+[ext_resource type="Script" uid="uid://cs0wthp58851h" path="res://Scenes/Interactive/Shelf/Shelf.cs" id="1_wgmku"]
+[ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://Scenes/Components/interaction_component.tscn" id="2_00mi8"]
+
+[node name="Shelf" type="Node2D" unique_id=728957880]
+script = ExtResource("1_wgmku")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=921280]
+
+[node name="InteractionComponent" parent="." unique_id=537522781 instance=ExtResource("2_00mi8")]
+
+[node name="CameraPosition" type="Marker2D" parent="." unique_id=779264424]
+position = Vector2(-17, 25)

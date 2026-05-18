@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://berxkukq286iq"]
 
-[ext_resource type="Script" uid="uid://ho2wqtonona1" path="res://scripts/main.gd" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://cljhuqxxmd762" path="res://ui/main_menu.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://d2igbxkdnor2r" path="res://ui/computer_screen.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://8c21th77pkm0" path="res://Main.cs" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cljhuqxxmd762" path="res://Ui/main_menu.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://d2igbxkdnor2r" path="res://Ui/computer_screen.tscn" id="3_h2yge"]
 
-[node name="Main" type="Node2D" unique_id=359154907]
+[node name="Main" type="Node2D" unique_id=359154907 node_paths=PackedStringArray("MainMenu")]
 process_mode = 3
-script = ExtResource("1_0wfyh")
+script = ExtResource("1_h2yge")
+MainMenu = NodePath("SubViewportContainer/SubViewport/MainMenu")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=424833605]
 custom_minimum_size = Vector2(320, 180)
@@ -27,5 +28,3 @@ render_target_update_mode = 4
 visible = false
 
 [node name="ComputerScreen" parent="CanvasLayer" unique_id=1224048351 instance=ExtResource("3_h2yge")]
-
-[connection signal="play_pressed" from="SubViewportContainer/SubViewport/MainMenu" to="." method="_on_main_menu_play_pressed"]

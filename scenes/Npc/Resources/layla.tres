@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NpcData" format=3 uid="uid://xmir8gcqrewx"]
+
+[ext_resource type="Texture2D" uid="uid://jptxjeaqkoro" path="res://Scenes/Npc/Sprites/layla.png" id="1_osg46"]
+[ext_resource type="Script" uid="uid://c6jhlpb4wxx60" path="res://Scenes/Npc/NpcData.cs" id="2_gx6ji"]
+
+[resource]
+script = ExtResource("2_gx6ji")
+NpcName = "Layla"
+NpcSprite = ExtResource("1_osg46")
+metadata/_custom_type_script = "uid://wbhatufuvp7x"

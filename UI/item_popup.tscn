@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uirlgsnh4ah"]
 
-[ext_resource type="Texture2D" uid="uid://bsiuehb8jc541" path="res://assets/UI/computer/shop-popup-components.png" id="1_icgxd"]
+[ext_resource type="Texture2D" uid="uid://bsiuehb8jc541" path="res://Ui/Sprites/computer/shop-popup-components.png" id="1_icgxd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxfpb"]
 texture = ExtResource("1_icgxd")

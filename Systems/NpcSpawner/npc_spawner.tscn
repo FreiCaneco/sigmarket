@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bw5kwjxsg1dwq"]
+
+[ext_resource type="Script" uid="uid://ccxsh4yyppm04" path="res://Systems/NpcSpawner/NpcSpawner.cs" id="1_rgtmm"]
+
+[node name="NpcSpawner" type="Node2D" unique_id=1062696247]
+script = ExtResource("1_rgtmm")
+
+[node name="NpcSpawnTimer" type="Timer" parent="." unique_id=1278413966]
