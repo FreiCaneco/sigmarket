@@ -2,7 +2,7 @@ using Godot;
 
 namespace sigmarket.Scenes.Interactive.Item;
 
-public partial class ItemResource : Resource
+public partial class ItemData : Resource
 {
     [Export] public string ItemName { get; set; }
     [Export] public AtlasTexture ItemTexture { get; set; }

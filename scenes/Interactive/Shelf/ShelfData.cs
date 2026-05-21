@@ -1,4 +1,5 @@
 using Godot;
+using sigmarket.Scenes.Interactive.Item;
 
 namespace sigmarket.Scenes.Interactive.Shelf;
 
@@ -12,11 +13,13 @@ public partial class ShelfData : Resource
     }
 
     [Export] public ShelfTypes ShelfType { get; set; }
-
-    public ShelfData() : this(ShelfTypes.Square2X2){}
-    public ShelfData(ShelfTypes shelfType)
+    [Export] public int Capacity { get; set; }
+    
+    public ShelfData() : this(ShelfTypes.Square2X2, 4){}
+    public ShelfData(ShelfTypes shelfType,  int capacity)
     {
         ShelfType = shelfType;
+        Capacity = capacity;
     }
 
 }

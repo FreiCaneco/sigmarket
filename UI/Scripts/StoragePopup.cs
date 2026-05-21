@@ -35,7 +35,7 @@ public partial class StoragePopup : Control
         foreach (var itemRes in Storage.Items)
         {
             ItemSlot itemSlot = (ItemSlot)_itemScene.Instantiate();
-            itemSlot.ItemResource = itemRes;
+            itemSlot.ItemData = itemRes;
             _gridContainer.AddChild(itemSlot);
         }
     }

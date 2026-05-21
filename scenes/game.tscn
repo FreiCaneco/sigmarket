@@ -83,7 +83,7 @@ tile_set = SubResource("TileSet_p57ef")
 position = Vector2(50, 73)
 
 [node name="Shelf" parent="Objects" unique_id=728957880 instance=ExtResource("3_o5yvi")]
-position = Vector2(94, 68)
+position = Vector2(94, 67)
 ShelfInfo = ExtResource("4_ldgsr")
 ShelfTexture = SubResource("AtlasTexture_o5yvi")
 ItemScene = ExtResource("6_ldgsr")
