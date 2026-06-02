@@ -12,11 +12,11 @@ public partial class Main : Node2D
     private PackedScene _gameScene = GD.Load<PackedScene>("res://Scenes/game.tscn");
     private PackedScene _computerMenuScene = GD.Load<PackedScene>("res://Ui/computer_screen.tscn");
 
-    [Export] public  MainMenu MainMenu;
+    [Export] public MainMenu MainMenu;
 
     public override void _Ready()
     {
-        _subViewport = GetNode<SubViewport>("SubViewportContainer/SubViewport");
+        _subViewport = GetNode<SubViewport>("160x90Viewport/SubViewport");
         _canvasLayer = GetNode<CanvasLayer>("CanvasLayer");
         
         SignalBus.Instance.ComputerInteracted += OnComputerInteracted;

@@ -1,4 +1,3 @@
-using System;
 using Godot;
 using Godot.Collections;
 
@@ -7,15 +6,15 @@ namespace sigmarket.Scenes.Interactive.Item;
 public partial class ItemSlot : TextureRect
 {
     private int _index;
-    private Node _storage;
+    private Node _itemContainer;
     
-    private const string StorageOriginKey = "storageOrigin";
+    private const string ContainerOriginKey = "itemContainerOrigin";
     private const string IndexOriginKey = "indexOrigin";
     
-    public void Configure(Node storage, int  index)
+    public void Configure(Node itemContainer, int index)
     {
         _index = index;
-        _storage = storage;
+        _itemContainer = itemContainer;
         Refresh();
     }
     public int GetIndex() => _index;
@@ -24,14 +23,14 @@ public partial class ItemSlot : TextureRect
     {
         var data = new Dictionary<Variant,Variant>
         {
-            {StorageOriginKey, _storage},
+            {ContainerOriginKey, _itemContainer},
             {IndexOriginKey,_index},
         };
         
         TextureRect previewTexture = new();
-        if (_storage is IItemStorage storage)
+        if (_itemContainer is IItemContainer itemContainer)
         {
-            var item = storage.GetItem(_index);
+            var item = itemContainer.GetItem(_index);
             if  (item == null) return new Variant();
             previewTexture.Texture = item.ItemTexture;
         }
@@ -47,47 +46,47 @@ public partial class ItemSlot : TextureRect
     public override bool _CanDropData(Vector2 atPosition, Variant data)
     {
         var dict = data.AsGodotDictionary();
-        return dict.ContainsKey(StorageOriginKey) && dict.ContainsKey(IndexOriginKey) && dict[StorageOriginKey].AsGodotObject() is Node; 
+        return dict.ContainsKey(ContainerOriginKey) && dict.ContainsKey(IndexOriginKey) && dict[ContainerOriginKey].AsGodotObject() is Node; 
     }
 
     public override void _DropData(Vector2 atPosition, Variant data)
     {
         var dict = data.AsGodotDictionary();
         
-        var originStorage =  dict[StorageOriginKey].AsGodotObject() as Node;
+        var originContainer = dict[ContainerOriginKey].AsGodotObject() as Node;
         int originIndex = (int)dict[IndexOriginKey];
 
 
-        if (originStorage is not IItemStorage oldStorage) return;
-        if (_storage is not IItemStorage targetStorage) return;
+        if (originContainer is not IItemContainer oldContainer) return;
+        if (_itemContainer is not IItemContainer targetContainer) return;
         
-        if (oldStorage == targetStorage)
+        if (oldContainer == targetContainer)
         {
-            targetStorage.SwapItems(originIndex, _index);
+            targetContainer.SwapItems(originIndex, _index);
             return;
         }
         
-        var originItem = oldStorage.GetItem(originIndex);
-        var targetItem =  targetStorage.GetItem(_index);
+        var originItem = oldContainer.GetItem(originIndex);
+        var targetItem = targetContainer.GetItem(_index);
         
-        oldStorage.SetItem(originIndex, targetItem);
-        targetStorage.SetItem(_index, originItem);
+        oldContainer.SetItem(originIndex, targetItem);
+        targetContainer.SetItem(_index, originItem);
     }
     
     public void Refresh()
     {
-        if (_storage is not IItemStorage storage)
+        if (_itemContainer is not IItemContainer itemContainer)
             return;
 
-        var itemData = storage.GetItem(_index);
+        var itemData = itemContainer.GetItem(_index);
         Texture = itemData?.ItemTexture;
     }
     
     public override void _Notification(int what)
     {
-        if (what == NotificationDragEnd && !IsDragSuccessful())
+        if (what == NotificationDragEnd)
         {
-            Modulate = new Color(Modulate);
+            Modulate = new Color(Modulate, 1.0f);
         }
     }
 }

@@ -6,10 +6,9 @@
 [ext_resource type="Resource" uid="uid://dtop2awk3hski" path="res://Scenes/Interactive/Shelf/Resources/shelf2x2.tres" id="4_ldgsr"]
 [ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://Shared/Sprites/builds.png" id="5_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://bfkx36jd2fwoc" path="res://Scenes/Player/player.tscn" id="6_1phco"]
-[ext_resource type="PackedScene" uid="uid://xh0c14u401rd" path="res://Scenes/Interactive/Item/item.tscn" id="6_ldgsr"]
 [ext_resource type="Script" uid="uid://bls0ttetmvi2i" path="res://Systems/Surrounding/RightBoundary.cs" id="7_1l0tm"]
 [ext_resource type="Script" uid="uid://c8bgn5asthiym" path="res://Systems/Camera/Camera.cs" id="7_h4fw4"]
-[ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://Ui/storage_popup.tscn" id="8_nnt18"]
+[ext_resource type="PackedScene" uid="uid://dbwpbtyj2p4ef" path="res://Ui/PlayerInventoryPopup/player_inventory_popup.tscn" id="8_nnt18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("1_h4fw4")
@@ -86,7 +85,6 @@ position = Vector2(50, 73)
 position = Vector2(94, 67)
 ShelfInfo = ExtResource("4_ldgsr")
 ShelfTexture = SubResource("AtlasTexture_o5yvi")
-ItemScene = ExtResource("6_ldgsr")
 
 [node name="Sections" type="Node2D" parent="." unique_id=1367307687 groups=["Sections"]]
 
@@ -122,5 +120,5 @@ shape = SubResource("WorldBoundaryShape2D_0tnpc")
 [node name="TopLayer" type="CanvasLayer" parent="." unique_id=187582112 groups=["Ui"]]
 layer = 0
 
-[node name="StoragePopUp" parent="TopLayer" unique_id=1090629977 instance=ExtResource("8_nnt18")]
+[node name="PlayerInventoryPopup" parent="TopLayer" unique_id=1090629977 instance=ExtResource("8_nnt18")]
 visible = false

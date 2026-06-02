@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sjo2ua5o2l5u"
-path="res://.godot/imported/menu loja.png-f55ff0e6013ebd7437b7ebb0bf6ff30f.ctex"
+uid="uid://cmxuv607bqsh3"
+path="res://.godot/imported/new buttons states.png-7c2fb71bf99b76d6f15c17b44210b923.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ui/Sprites/computer/menu loja.png"
-dest_files=["res://.godot/imported/menu loja.png-f55ff0e6013ebd7437b7ebb0bf6ff30f.ctex"]
+source_file="res://Ui/Sprites/computer/new buttons states.png"
+dest_files=["res://.godot/imported/new buttons states.png-7c2fb71bf99b76d6f15c17b44210b923.ctex"]
 
 [params]
 

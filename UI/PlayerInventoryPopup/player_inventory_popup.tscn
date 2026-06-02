@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dbwpbtyj2p4ef"]
 
 [ext_resource type="Texture2D" uid="uid://7bwq0d6ktciv" path="res://Ui/Sprites/StoragePopUp.png" id="1_1ycag"]
-[ext_resource type="Script" uid="uid://d4a1a01g3mi32" path="res://Ui/Scripts/StoragePopup.cs" id="1_1ycny"]
-[ext_resource type="Resource" uid="uid://ds3ouncldtrxf" path="res://Systems/Inventory/storage.tres" id="2_b3ulc"]
+[ext_resource type="Script" uid="uid://d4a1a01g3mi32" path="res://Ui/PlayerInventoryPopup/PlayerInventoryPopup.cs" id="1_1ycny"]
+[ext_resource type="Resource" uid="uid://ds3ouncldtrxf" path="res://Systems/Inventory/storage.tres" id="2_6bguh"]
+[ext_resource type="Script" uid="uid://dhkpwh7fefax8" path="res://Ui/PlayerInventoryPopup/PlayerItemContainer.cs" id="3_md3l4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxshs"]
 atlas = ExtResource("1_1ycag")
 region = Rect2(0, 0, 73, 90)
 
-[node name="StoragePopUp" type="Control" unique_id=119744149]
+[node name="PlayerInventoryPopup" type="Control" unique_id=119744149]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_1ycny")
-Storage = ExtResource("2_b3ulc")
+PlayerInventory = ExtResource("2_6bguh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=347465258]
 layout_mode = 0
@@ -25,7 +26,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AtlasTexture_mxshs")
 
-[node name="Storage" type="GridContainer" parent="." unique_id=833533032]
+[node name="SlotsGrid" type="GridContainer" parent="." unique_id=833533032]
 custom_minimum_size = Vector2(63, 63)
 layout_mode = 0
 offset_left = 5.0
@@ -36,3 +37,6 @@ mouse_filter = 2
 theme_override_constants/h_separation = 3
 theme_override_constants/v_separation = 3
 columns = 6
+
+[node name="PlayerItemContainer" type="Node" parent="." unique_id=1375407387]
+script = ExtResource("3_md3l4")

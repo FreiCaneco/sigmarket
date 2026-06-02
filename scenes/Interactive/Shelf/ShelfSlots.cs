@@ -13,17 +13,17 @@ public partial class ShelfSlots : Node2D
     private Camera _camera;
     [Export] public PackedScene ItemScene;
     
-    private ShelfStorage _storage;
+    private ShelfItemContainer _itemContainer;
     
-    public void Configure(ShelfData shelfData, ShelfStorage storage, Camera camera,  CanvasLayer uiCanvas)
+    public void Configure(ShelfData shelfData, ShelfItemContainer itemContainer, Camera camera,  CanvasLayer uiCanvas)
     {
         _shelfData = shelfData;
-        _storage = storage;
+        _itemContainer = itemContainer;
         _uiCanvas = uiCanvas;
         _camera = camera;
         _camera.CameraAnimationEnded += OnCameraFinishedAnimation;
         AddSlotsBasedOnType();
-        _storage.ShelfStorageChanged += RefreshItems;
+        _itemContainer.ShelfItemContainerChanged += RefreshItems;
     }
 
     public override void _Process(double delta)
@@ -60,7 +60,7 @@ public partial class ShelfSlots : Node2D
                 for (int i = 0; i < numOfSlots; i++)
                 {
                     ItemSlot itemSlot = (ItemSlot)ItemScene.Instantiate();
-                    itemSlot.Configure(_storage, i);
+                    itemSlot.Configure(_itemContainer, i);
                     _slotsGrid.AddChild(itemSlot);
                 }
                 break;
@@ -91,6 +91,4 @@ public partial class ShelfSlots : Node2D
             _slotsGrid.Position = _slotsGridOriginalPosition;  
         }
     }
-
-    
 }

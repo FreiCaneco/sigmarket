@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfn7x5uxouv5x"
-path="res://.godot/imported/empty_shop_menu.png-b5465c6dc2518cdaefa041f1dc542081.ctex"
+uid="uid://cdem51h5r7vbm"
+path="res://.godot/imported/TabButtonStates.png-e8ac3d26b9e56b599e9ec623d5a7d6c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ui/Sprites/computer/empty_shop_menu.png"
-dest_files=["res://.godot/imported/empty_shop_menu.png-b5465c6dc2518cdaefa041f1dc542081.ctex"]
+source_file="res://Ui/Sprites/computer/TabButtonStates.png"
+dest_files=["res://.godot/imported/TabButtonStates.png-e8ac3d26b9e56b599e9ec623d5a7d6c8.ctex"]
 
 [params]
 

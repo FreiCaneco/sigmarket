@@ -3,9 +3,9 @@ using sigmarket.Scenes.Interactive.Item;
 
 namespace sigmarket.Scenes.Interactive.Shelf;
 
-public partial class ShelfStorage : Node, IItemStorage
+public partial class ShelfItemContainer : Node, IItemContainer
 {
-    [Signal] public delegate void ShelfStorageChangedEventHandler();
+    [Signal] public delegate void ShelfItemContainerChangedEventHandler();
     
     private ItemData[] Slots { get;  set; }
 
@@ -22,12 +22,12 @@ public partial class ShelfStorage : Node, IItemStorage
     public void SetItem(int index, ItemData item)
     {
         Slots[index] = item;
-        EmitSignal(SignalName.ShelfStorageChanged);
+        EmitSignal(SignalName.ShelfItemContainerChanged);
     }
     
     public void SwapItems(int fromIndex, int toIndex)
     {
         (Slots[fromIndex], Slots[toIndex]) = (Slots[toIndex], Slots[fromIndex]);
-        EmitSignal(SignalName.ShelfStorageChanged);
+        EmitSignal(SignalName.ShelfItemContainerChanged);
     }
 }

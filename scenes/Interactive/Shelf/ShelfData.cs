@@ -1,5 +1,4 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
 
 namespace sigmarket.Scenes.Interactive.Shelf;
 

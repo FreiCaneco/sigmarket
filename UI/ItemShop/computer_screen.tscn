@@ -1,0 +1,485 @@
+[gd_scene format=3 uid="uid://d2igbxkdnor2r"]
+
+[ext_resource type="Script" uid="uid://b525rorcix6ly" path="res://Ui/ItemShop/ComputerScreen.cs" id="1_14cw0"]
+[ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://Ui/Themes/sidebar.tres" id="2_a1c6t"]
+[ext_resource type="Texture2D" uid="uid://dfn7x5uxouv5x" path="res://Ui/Sprites/computer/shop_menu.png" id="3_75wj3"]
+[ext_resource type="ButtonGroup" uid="uid://cmqnd32br6b7w" path="res://Ui/ItemShop/ButtonGroups/AreasButtonsGroup.tres" id="4_75wj3"]
+[ext_resource type="Texture2D" uid="uid://cmxuv607bqsh3" path="res://Ui/Sprites/computer/new buttons states.png" id="4_m3l5o"]
+[ext_resource type="ButtonGroup" uid="uid://3cqxyb11ngo6" path="res://Ui/ItemShop/ButtonGroups/TabButtonsGroup.tres" id="5_a1c6t"]
+[ext_resource type="Texture2D" uid="uid://cdem51h5r7vbm" path="res://Ui/Sprites/computer/TabButtonStates.png" id="5_f07l8"]
+[ext_resource type="ButtonGroup" uid="uid://c7fhh221tbfy6" path="res://Ui/ItemShop/ButtonGroups/ItemsButtonsGroup.tres" id="6_m3l5o"]
+[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://Ui/Sprites/computer/secret shop icon.png" id="6_mrbdy"]
+[ext_resource type="ButtonGroup" uid="uid://bpkf5v2nrodsu" path="res://Ui/ItemShop/ButtonGroups/UpgradesButtonsGroup.tres" id="7_f07l8"]
+[ext_resource type="ButtonGroup" uid="uid://g68mb50k6ckb" path="res://Ui/ItemShop/ButtonGroups/ShopsButtonsGroup.tres" id="8_mrbdy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u32o4"]
+texture = ExtResource("3_75wj3")
+region_rect = Rect2(0, 0, 45, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epesx"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(59, 70, 27, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuw6l"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(59, 51, 27, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf1q6"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(59, 61, 27, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvkss"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(60, 100, 25, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b30an"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(60, 81, 25, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvjo4"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(60, 91, 25, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42bdl"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(58, 135, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd2uj"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(58, 116, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gc8s"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(58, 126, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tsaj"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(110, 62, 37, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx8ef"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(110, 43, 37, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q4ll"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(110, 53, 37, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq57c"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(115, 98, 23, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjjr7"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(115, 79, 23, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hliy"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(115, 89, 23, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yojfh"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(111, 135, 35, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhe33"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(111, 116, 35, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f5qr"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(111, 126, 35, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0hx8"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(178, 64, 34, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eus5"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(178, 45, 34, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvlwa"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(178, 55, 34, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xfwe"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(186, 96, 17, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1nts"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(186, 77, 17, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qqu3"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(186, 87, 17, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqrm"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(176, 126, 40, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpknh"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(176, 107, 40, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olk4g"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(176, 117, 40, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcdw1"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(177, 158, 41, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jjey"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(177, 139, 41, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ph1w"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(177, 149, 41, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s04c"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(245, 87, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk2d3"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(245, 77, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3n22"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(245, 96, 31, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdvoi"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(241, 112, 41, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iic3e"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(241, 131, 41, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uknf"]
+atlas = ExtResource("4_m3l5o")
+region = Rect2(241, 121, 41, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qyl26"]
+texture = ExtResource("3_75wj3")
+region_rect = Rect2(45, 0, 242, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyl26"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(46, 48, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxjv4"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(46, 32, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_413ax"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(46, 63, 50, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bydg"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(128, 48, 49, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v4k6"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(128, 32, 49, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n31oq"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(128, 63, 49, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xraot"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(192, 48, 78, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl6md"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(192, 32, 78, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wld4q"]
+atlas = ExtResource("5_f07l8")
+region = Rect2(192, 63, 78, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u32o4"]
+atlas = ExtResource("3_75wj3")
+region = Rect2(287, 0, 33, 180)
+
+[node name="ComputerScreen" type="Control" unique_id=1224048351 node_paths=PackedStringArray("AreasButtons", "ItemsButtons", "UpgradesButtons", "AreasTab", "ItemsTab", "UpgradesTab", "SecretShopTab")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_14cw0")
+AreasButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/AreasButtons")
+ItemsButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/ItemsButtons")
+UpgradesButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons")
+AreasTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Areas")
+ItemsTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Items")
+UpgradesTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Upgrades")
+SecretShopTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/SecretShop")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=11702789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="SideBar" type="PanelContainer" parent="HBoxContainer" unique_id=858053649]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_a1c6t")
+theme_override_styles/panel = SubResource("StyleBoxTexture_u32o4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/SideBar" unique_id=1335474378]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Spacer" type="Control" parent="HBoxContainer/SideBar/HBoxContainer" unique_id=1614039684]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+
+[node name="SectionsHolder" type="VBoxContainer" parent="HBoxContainer/SideBar/HBoxContainer" unique_id=882299357]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="Spacer" type="Control" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder" unique_id=1154536566]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="AreasButtons" type="VBoxContainer" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder" unique_id=649150065]
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 12
+
+[node name="Floors" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/AreasButtons" unique_id=791944086]
+custom_minimum_size = Vector2(162, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+toggle_mode = true
+button_group = ExtResource("4_75wj3")
+texture_normal = SubResource("AtlasTexture_epesx")
+texture_pressed = SubResource("AtlasTexture_tuw6l")
+texture_hover = SubResource("AtlasTexture_lf1q6")
+stretch_mode = 4
+
+[node name="Walls" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/AreasButtons" unique_id=1343869973]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+toggle_mode = true
+button_group = ExtResource("4_75wj3")
+texture_normal = SubResource("AtlasTexture_fvkss")
+texture_pressed = SubResource("AtlasTexture_b30an")
+texture_hover = SubResource("AtlasTexture_kvjo4")
+stretch_mode = 4
+
+[node name="Sectors" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/AreasButtons" unique_id=505447186]
+custom_minimum_size = Vector2(186, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("4_75wj3")
+texture_normal = SubResource("AtlasTexture_42bdl")
+texture_pressed = SubResource("AtlasTexture_jd2uj")
+texture_hover = SubResource("AtlasTexture_5gc8s")
+stretch_mode = 4
+
+[node name="ItemsButtons" type="VBoxContainer" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder" unique_id=2105462240]
+visible = false
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 12
+
+[node name="Furniture" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/ItemsButtons" unique_id=429317642]
+custom_minimum_size = Vector2(222, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("6_m3l5o")
+texture_normal = SubResource("AtlasTexture_0tsaj")
+texture_pressed = SubResource("AtlasTexture_vx8ef")
+texture_hover = SubResource("AtlasTexture_3q4ll")
+stretch_mode = 4
+
+[node name="Foods" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/ItemsButtons" unique_id=1573388886]
+custom_minimum_size = Vector2(138, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("6_m3l5o")
+texture_normal = SubResource("AtlasTexture_wq57c")
+texture_pressed = SubResource("AtlasTexture_qjjr7")
+texture_hover = SubResource("AtlasTexture_5hliy")
+stretch_mode = 4
+
+[node name="Products" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/ItemsButtons" unique_id=749030153]
+custom_minimum_size = Vector2(210, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("6_m3l5o")
+texture_normal = SubResource("AtlasTexture_yojfh")
+texture_pressed = SubResource("AtlasTexture_vhe33")
+texture_hover = SubResource("AtlasTexture_1f5qr")
+stretch_mode = 4
+
+[node name="UpgradesButtons" type="VBoxContainer" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder" unique_id=754166760]
+visible = false
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Services" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons" unique_id=708221926]
+custom_minimum_size = Vector2(204, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("7_f07l8")
+texture_normal = SubResource("AtlasTexture_c0hx8")
+texture_pressed = SubResource("AtlasTexture_2eus5")
+texture_hover = SubResource("AtlasTexture_vvlwa")
+stretch_mode = 4
+
+[node name="Hire" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons" unique_id=1244607396]
+custom_minimum_size = Vector2(102, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+toggle_mode = true
+button_group = ExtResource("7_f07l8")
+texture_normal = SubResource("AtlasTexture_4xfwe")
+texture_pressed = SubResource("AtlasTexture_e1nts")
+texture_hover = SubResource("AtlasTexture_5qqu3")
+stretch_mode = 4
+
+[node name="Marketing" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons" unique_id=1509172515]
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("7_f07l8")
+texture_normal = SubResource("AtlasTexture_mbqrm")
+texture_pressed = SubResource("AtlasTexture_wpknh")
+texture_hover = SubResource("AtlasTexture_olk4g")
+stretch_mode = 4
+
+[node name="Treatment" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons" unique_id=1087859131]
+custom_minimum_size = Vector2(246, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("7_f07l8")
+texture_normal = SubResource("AtlasTexture_dcdw1")
+texture_pressed = SubResource("AtlasTexture_8jjey")
+texture_hover = SubResource("AtlasTexture_7ph1w")
+stretch_mode = 4
+
+[node name="Shops" type="VBoxContainer" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder" unique_id=747988329]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/Shops" unique_id=1918976225]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="Jackson" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/Shops" unique_id=2052571522]
+custom_minimum_size = Vector2(186, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+toggle_mode = true
+button_group = ExtResource("8_mrbdy")
+texture_normal = SubResource("AtlasTexture_5s04c")
+texture_pressed = SubResource("AtlasTexture_kk2d3")
+texture_hover = SubResource("AtlasTexture_o3n22")
+stretch_mode = 4
+
+[node name="Hortistore" type="TextureButton" parent="HBoxContainer/SideBar/HBoxContainer/SectionsHolder/Shops" unique_id=1109691961]
+custom_minimum_size = Vector2(246, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+button_group = ExtResource("8_mrbdy")
+texture_normal = SubResource("AtlasTexture_tdvoi")
+texture_pressed = SubResource("AtlasTexture_iic3e")
+texture_hover = SubResource("AtlasTexture_3uknf")
+stretch_mode = 4
+
+[node name="Center" type="PanelContainer" parent="HBoxContainer" unique_id=390257774]
+custom_minimum_size = Vector2(1452, 1080)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qyl26")
+
+[node name="TabsAndContent" type="VBoxContainer" parent="HBoxContainer/Center" unique_id=1149219926]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Spacer" type="Control" parent="HBoxContainer/Center/TabsAndContent" unique_id=2054652275]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="TabsHolder" type="HBoxContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=304290542]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Areas" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=339958154]
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("5_a1c6t")
+texture_normal = SubResource("AtlasTexture_qyl26")
+texture_pressed = SubResource("AtlasTexture_fxjv4")
+texture_hover = SubResource("AtlasTexture_413ax")
+stretch_mode = 4
+
+[node name="Items" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=742530061]
+custom_minimum_size = Vector2(294, 96)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("5_a1c6t")
+texture_normal = SubResource("AtlasTexture_4bydg")
+texture_pressed = SubResource("AtlasTexture_3v4k6")
+texture_hover = SubResource("AtlasTexture_n31oq")
+stretch_mode = 4
+
+[node name="Upgrades" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=16059587]
+custom_minimum_size = Vector2(468, 96)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("5_a1c6t")
+texture_normal = SubResource("AtlasTexture_xraot")
+texture_pressed = SubResource("AtlasTexture_gl6md")
+texture_hover = SubResource("AtlasTexture_wld4q")
+stretch_mode = 4
+
+[node name="SecretShop" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=892629252]
+custom_minimum_size = Vector2(198, 72)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("5_a1c6t")
+texture_normal = ExtResource("6_mrbdy")
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=720902642]
+layout_mode = 2
+
+[node name="BeerAd" type="TextureRect" parent="HBoxContainer" unique_id=1482663327]
+custom_minimum_size = Vector2(198, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+texture = SubResource("AtlasTexture_u32o4")

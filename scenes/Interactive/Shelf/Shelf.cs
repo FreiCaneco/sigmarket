@@ -13,7 +13,7 @@ public partial class Shelf : Node2D
     private Marker2D _cameraPosition;
     
     private InteractionComponent _interactionComponent;
-    private ShelfStorage _storage;
+    private ShelfItemContainer _itemContainer;
     private ShelfSlots _shelfSlots;
     
     // Dependencias dos componentes
@@ -41,21 +41,18 @@ public partial class Shelf : Node2D
         _cameraPosition = GetNode<Marker2D>("CameraPosition");
         _interactionComponent = GetNode<InteractionComponent>("InteractionComponent");
         
-        if (_atlasTexture != null)
-        {
-            _sprite.Texture = _atlasTexture;
-        }
+        if (_atlasTexture != null) _sprite.Texture = _atlasTexture;
         
         // Dependencias
         _camera = (Camera)GetTree().GetFirstNodeInGroup("Camera");
         _uiCanvas = (CanvasLayer)GetTree().GetFirstNodeInGroup("Ui");
         
         // Componentes
-        _storage = GetNode<ShelfStorage>("ShelfStorage");
-        _storage.Configure(ShelfInfo);
+        _itemContainer = GetNode<ShelfItemContainer>("ShelfItemContainer");
+        _itemContainer.Configure(ShelfInfo);
         
         _shelfSlots = GetNode<ShelfSlots>("ShelfSlots");
-        _shelfSlots.Configure(ShelfInfo,_storage,_camera,_uiCanvas);
+        _shelfSlots.Configure(ShelfInfo,_itemContainer,_camera,_uiCanvas);
 
 
         // Sinais

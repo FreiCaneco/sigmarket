@@ -1,6 +1,6 @@
 namespace sigmarket.Scenes.Interactive.Item;
 
-public interface IItemStorage
+public interface IItemContainer
 {
     ItemData GetItem(int index);
     void SetItem(int index, ItemData item);
