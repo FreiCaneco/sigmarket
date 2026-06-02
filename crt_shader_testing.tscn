@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cngu4j7g8cvn2"]
+
+[ext_resource type="PackedScene" uid="uid://d2igbxkdnor2r" path="res://UI/ItemShop/computer_screen.tscn" id="1_bjqap"]
+[ext_resource type="Shader" uid="uid://b6155sta7sjpb" path="res://UI/ItemShop/CrtMonitor.gdshader" id="2_xbcqe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bjqap"]
+shader = ExtResource("2_xbcqe")
+
+[node name="CrtShaderTesting" type="CanvasLayer" unique_id=1447797918]
+
+[node name="ComputerScreen" parent="." unique_id=1224048351 instance=ExtResource("1_bjqap")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=491242009]
+material = SubResource("ShaderMaterial_bjqap")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
