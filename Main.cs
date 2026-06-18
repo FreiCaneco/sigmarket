@@ -17,7 +17,7 @@ public partial class Main : Node2D
 	public override void _Ready()
 	{
 		_subViewport = GetNode<SubViewport>("160x90Viewport/SubViewport");
-		_canvasLayer = GetNode<CanvasLayer>("CanvasLayer");
+		_canvasLayer = GetNode<CanvasLayer>("Ui");
 		
 		SignalBus.Instance.ComputerInteracted += OnComputerInteracted;
 		MainMenu.PlayPressed += OnMainMenuPlayPressed;

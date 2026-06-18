@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cos62b6tblrhg"]
+
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Item/ItemData.cs" id="1_50jli"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://Shared/Sprites/builds.png" id="1_a8kbr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jly73"]
+atlas = ExtResource("1_a8kbr")
+region = Rect2(1, 1, 36, 32)
+
+[resource]
+script = ExtResource("1_50jli")
+ItemTexture = SubResource("AtlasTexture_jly73")
+metadata/_custom_type_script = "uid://c8tswwpf2ox6o"

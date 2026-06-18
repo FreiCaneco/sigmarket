@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jj7wvsxo3dfx"
-path="res://.godot/imported/erica.png-0b4277847861a361a605987e113688c4.ctex"
+path="res://.godot/imported/erica.png-84c63c5ef856a4d918702f8ec48dc2af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Npc/Sprites/erica.png"
-dest_files=["res://.godot/imported/erica.png-0b4277847861a361a605987e113688c4.ctex"]
+source_file="res://Scenes/Npc/Sprites/erica.png"
+dest_files=["res://.godot/imported/erica.png-84c63c5ef856a4d918702f8ec48dc2af.ctex"]
 
 [params]
 

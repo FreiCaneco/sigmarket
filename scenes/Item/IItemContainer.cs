@@ -1,8 +1,8 @@
-namespace sigmarket.Scenes.Interactive.Item;
+namespace sigmarket.Scenes.Item;
 
 public interface IItemContainer
 {
-    ItemData GetItem(int index);
+    Scenes.Item.ItemData GetItem(int index);
     void SetItem(int index, ItemData item);
     void SwapItems(int fromIndex, int toIndex);
 }

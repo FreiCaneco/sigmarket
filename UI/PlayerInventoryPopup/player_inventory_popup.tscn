@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_1ycny")
-PlayerInventory = ExtResource("2_6bguh")
+PlayerItemCollection = ExtResource("2_6bguh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=347465258]
 layout_mode = 0

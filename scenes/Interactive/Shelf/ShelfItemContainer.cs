@@ -1,5 +1,6 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
+using sigmarket.Scenes.Item;
+using ItemData = sigmarket.Scenes.Item.ItemData;
 
 namespace sigmarket.Scenes.Interactive.Shelf;
 

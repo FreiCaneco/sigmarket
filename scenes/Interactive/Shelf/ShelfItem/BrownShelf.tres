@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cx64r1ckiw6ae"]
+
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Item/ItemData.cs" id="1_0gkl3"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://Shared/Sprites/builds.png" id="1_a0qhr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnvjw"]
+atlas = ExtResource("1_a0qhr")
+region = Rect2(39, 5, 24, 28)
+
+[resource]
+script = ExtResource("1_0gkl3")
+ItemName = "Basic Shelf"
+ItemTexture = SubResource("AtlasTexture_bnvjw")
+metadata/_custom_type_script = "uid://c8tswwpf2ox6o"

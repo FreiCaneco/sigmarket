@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemCollection" format=3 uid="uid://bbn2ffyyoh313"]
+
+[ext_resource type="Script" uid="uid://b637tti5a7vbk" path="res://Systems/Inventory/ItemCollection.cs" id="1_klmng"]
+[ext_resource type="Resource" uid="uid://cn8wgtqxabae5" path="res://Scenes/Item/Resources/apple.tres" id="1_x1le0"]
+[ext_resource type="Resource" uid="uid://b2pf0ocqxbpyu" path="res://Scenes/Item/Resources/carrot.tres" id="2_h6tds"]
+[ext_resource type="Resource" uid="uid://cxx046m5tmmyy" path="res://Scenes/Item/Resources/green_apple.tres" id="3_tvjen"]
+[ext_resource type="Resource" uid="uid://cm32miijklbth" path="res://Scenes/Item/Resources/pineapple.tres" id="4_6nyw1"]
+
+[resource]
+script = ExtResource("1_klmng")
+Items = Array[Resource]([ExtResource("1_x1le0"), ExtResource("2_h6tds"), ExtResource("3_tvjen"), ExtResource("4_6nyw1")])
+metadata/_custom_type_script = "uid://b637tti5a7vbk"

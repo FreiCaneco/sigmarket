@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xh0c14u401rd"]
 
-[ext_resource type="Script" uid="uid://bu28eqaqltb4s" path="res://Scenes/Interactive/Item/ItemSlot.cs" id="1_4jjwm"]
+[ext_resource type="Script" uid="uid://bu28eqaqltb4s" path="res://Scenes/Item/ItemSlot.cs" id="1_4jjwm"]
 
 [node name="ItemSlot" type="TextureRect" unique_id=732755566]
 custom_minimum_size = Vector2(8, 8)

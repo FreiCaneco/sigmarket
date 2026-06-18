@@ -1,6 +1,7 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
+using sigmarket.Scenes.Item;
 using sigmarket.Systems.Inventory;
+using ItemData = sigmarket.Scenes.Item.ItemData;
 
 namespace sigmarket.Ui.PlayerInventoryPopup;
 
@@ -9,13 +10,13 @@ public partial class PlayerItemContainer : Node, IItemContainer
     [Signal] public delegate void PlayerItemContainerChangedEventHandler();
     private ItemData[] _slots;
 
-    public void Configure(Inventory playerInventory)
+    public void Configure(ItemCollection playerItemCollection)
     {
-        _slots = new ItemData[playerInventory.Items.Count];
+        _slots = new ItemData[playerItemCollection.Items.Count];
 
-        for (int i = 0; i < playerInventory.Items.Count; i++)
+        for (int i = 0; i < playerItemCollection.Items.Count; i++)
         {
-            _slots[i] = playerInventory.Items[i];
+            _slots[i] = playerItemCollection.Items[i];
         }
     }
 

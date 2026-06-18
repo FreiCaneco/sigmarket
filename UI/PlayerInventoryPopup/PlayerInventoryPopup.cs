@@ -1,15 +1,15 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
 using sigmarket.Shared.Singletons;
 using sigmarket.Systems.Inventory;
+using ItemSlot = sigmarket.Scenes.Item.ItemSlot;
 
 namespace sigmarket.Ui.PlayerInventoryPopup;
 
 public partial class PlayerInventoryPopup : Control
 {
-    [Export] public Inventory PlayerInventory {get; set;}
+    [Export] public ItemCollection PlayerItemCollection {get; set;}
     private GridContainer _gridSlots;
-    private PackedScene _itemSlotScene = GD.Load<PackedScene>("res://Scenes/Interactive/Item/item_slot.tscn");
+    private PackedScene _itemSlotScene = GD.Load<PackedScene>("res://Scenes/Item/item_slot.tscn");
     private PlayerItemContainer _itemContainer;
     
     public override void _Ready()
@@ -18,7 +18,7 @@ public partial class PlayerInventoryPopup : Control
         
         _gridSlots = GetNode<GridContainer>("SlotsGrid");
         _itemContainer = GetNode<PlayerItemContainer>("PlayerItemContainer");
-        _itemContainer.Configure(PlayerInventory);
+        _itemContainer.Configure(PlayerItemCollection);
         _itemContainer.PlayerItemContainerChanged += RefreshItems;
         AddSlotsToGrid();
         
@@ -30,7 +30,7 @@ public partial class PlayerInventoryPopup : Control
     private void CloseStorage() { Visible = false; }
     private void AddSlotsToGrid()
     {
-        for (var i = 0; i < PlayerInventory.Items.Count; i++)
+        for (var i = 0; i < PlayerItemCollection.Items.Count; i++)
         {
             var itemSlot = (ItemSlot)_itemSlotScene.Instantiate();
             itemSlot.Configure(_itemContainer,i);

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://uirlgsnh4ah"]
+
+[ext_resource type="Texture2D" uid="uid://bsiuehb8jc541" path="res://Ui/Sprites/computer/shop-popup-components.png" id="1_jgr2a"]
+[ext_resource type="Script" uid="uid://cbbpwvuelmoly" path="res://Ui/ItemPopup/ItemPopup.cs" id="2_dcqp6"]
+[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="3_pvy4q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxfpb"]
+texture = ExtResource("1_jgr2a")
+region_rect = Rect2(190, 3, 120, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0rkk"]
+atlas = ExtResource("3_pvy4q")
+region = Rect2(82, 30, 12, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08jpf"]
+atlas = ExtResource("3_pvy4q")
+region = Rect2(98, 30, 12, 5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08jpf"]
+texture = ExtResource("1_jgr2a")
+region_rect = Rect2(4, 3, 44, 44)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1ybn"]
+texture = ExtResource("1_jgr2a")
+region_rect = Rect2(4, 51, 44, 19)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0rkk"]
+texture = ExtResource("1_jgr2a")
+region_rect = Rect2(4, 3, 44, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1ybn"]
+atlas = ExtResource("1_jgr2a")
+region = Rect2(52, 2, 42, 15)
+
+[node name="ItemPopupLayout" type="PanelContainer" unique_id=343815476 node_paths=PackedStringArray("TopBar", "CloseButton", "ItemTexture")]
+z_index = 10
+custom_minimum_size = Vector2(720, 534)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -348.0
+offset_top = -255.0
+offset_right = 372.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_cxfpb")
+script = ExtResource("2_dcqp6")
+TopBar = NodePath("MarginContainer/VBoxContainer/TopBar")
+CloseButton = NodePath("MarginContainer/VBoxContainer/TopBar/MarginContainer/ClosePopup")
+ItemTexture = NodePath("MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide/PanelContainer/ItemTexture")
+Margin = 300.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2143878345]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=803636084]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1865367205]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1091816008]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 6
+
+[node name="ClosePopup" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar/MarginContainer" unique_id=150496387]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = SubResource("AtlasTexture_e0rkk")
+texture_hover = SubResource("AtlasTexture_08jpf")
+stretch_mode = 5
+
+[node name="MainContentMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1916121687]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MainContentMargin" unique_id=766676179]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="LeftSide" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer" unique_id=614261118]
+custom_minimum_size = Vector2(264, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 24
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide" unique_id=1696009057]
+custom_minimum_size = Vector2(264, 264)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_08jpf")
+
+[node name="ItemTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide/PanelContainer" unique_id=2047011634]
+custom_minimum_size = Vector2(144, 168)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch_mode = 5
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide" unique_id=1772368575]
+custom_minimum_size = Vector2(264, 114)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n1ybn")
+
+[node name="RightSide" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer" unique_id=745117918]
+custom_minimum_size = Vector2(264, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide" unique_id=1180980234]
+custom_minimum_size = Vector2(264, 264)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e0rkk")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide/PanelContainer" unique_id=173640468]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide" unique_id=303521851]
+custom_minimum_size = Vector2(252, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_n1ybn")
+stretch_mode = 5

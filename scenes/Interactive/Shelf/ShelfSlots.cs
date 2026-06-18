@@ -1,6 +1,6 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
 using sigmarket.Systems.Camera;
+using ItemSlot = sigmarket.Scenes.Item.ItemSlot;
 
 namespace sigmarket.Scenes.Interactive.Shelf;
 

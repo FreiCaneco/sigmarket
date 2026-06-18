@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cngu4j7g8cvn2"]
 
-[ext_resource type="PackedScene" uid="uid://d2igbxkdnor2r" path="res://UI/ItemShop/computer_screen.tscn" id="1_bjqap"]
-[ext_resource type="Shader" uid="uid://b6155sta7sjpb" path="res://UI/ItemShop/CrtMonitor.gdshader" id="2_xbcqe"]
+[ext_resource type="PackedScene" uid="uid://d2igbxkdnor2r" path="res://Ui/ItemShop/computer_screen.tscn" id="1_bjqap"]
+[ext_resource type="Shader" uid="uid://b6155sta7sjpb" path="res://Ui/ItemShop/CrtMonitor.gdshader" id="2_xbcqe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bjqap"]
 shader = ExtResource("2_xbcqe")
+shader_parameter/SCREEN_HEIGHT = 1080.0
 
 [node name="CrtShaderTesting" type="CanvasLayer" unique_id=1447797918]
 

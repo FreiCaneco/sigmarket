@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c8jrn5wk7h3yu"]
+
+[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="1_n6rkm"]
+[ext_resource type="Script" uid="uid://b3755dlpdnulv" path="res://Ui/ItemShop/Scripts/ShopItemHolder.cs" id="2_r3kf0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j6dwq"]
+texture = ExtResource("1_n6rkm")
+region_rect = Rect2(261, 76, 43, 39)
+
+[node name="ShopItemHolder" type="PanelContainer" unique_id=408819148 node_paths=PackedStringArray("PopupOpener")]
+custom_minimum_size = Vector2(258, 234)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -117.0
+offset_right = 129.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j6dwq")
+script = ExtResource("2_r3kf0")
+PopupOpener = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=102758026]
+layout_mode = 2
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Button" unique_id=100626236]
+layout_mode = 0
+offset_right = 258.0
+offset_bottom = 234.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ItemSprite" type="TextureRect" parent="Button/MarginContainer" unique_id=976494383]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch_mode = 5

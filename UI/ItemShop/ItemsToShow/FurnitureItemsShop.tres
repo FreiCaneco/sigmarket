@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemCollection" format=3 uid="uid://bm5vpi4kroiog"]
+
+[ext_resource type="Script" uid="uid://b637tti5a7vbk" path="res://Systems/Inventory/ItemCollection.cs" id="1_eahx7"]
+[ext_resource type="Resource" uid="uid://bq6tsci6cyd1m" path="res://Scenes/Interactive/CashRegister/CashRegisterItem.tres" id="1_xbulv"]
+[ext_resource type="Resource" uid="uid://cx64r1ckiw6ae" path="res://Scenes/Interactive/Shelf/ShelfItem/BrownShelf.tres" id="2_nougv"]
+[ext_resource type="Resource" uid="uid://cos62b6tblrhg" path="res://Scenes/Interactive/Shelf/ShelfItem/PurpleShelf.tres" id="3_pblh3"]
+
+[resource]
+script = ExtResource("1_eahx7")
+Items = Array[Resource]([ExtResource("1_xbulv"), ExtResource("2_nougv"), ExtResource("3_pblh3")])
+metadata/_custom_type_script = "uid://b637tti5a7vbk"

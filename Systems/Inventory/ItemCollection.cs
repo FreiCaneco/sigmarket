@@ -1,10 +1,10 @@
 using Godot;
-using sigmarket.Scenes.Interactive.Item;
+using ItemData = sigmarket.Scenes.Item.ItemData;
 
 namespace sigmarket.Systems.Inventory;
 
 [GlobalClass]
-public partial class Inventory : Resource
+public partial class ItemCollection : Resource
 {
     [Export] public Godot.Collections.Array<ItemData> Items { get; set; }
 }

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc1mpottgto6l"
-path="res://.godot/imported/jackson.png-74c835553fc9b9e48878e1579245905c.ctex"
+path="res://.godot/imported/jackson.png-be7d1ece95c9dde3d48ade66cd567f6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Npc/Sprites/jackson.png"
-dest_files=["res://.godot/imported/jackson.png-74c835553fc9b9e48878e1579245905c.ctex"]
+source_file="res://Scenes/Npc/Sprites/jackson.png"
+dest_files=["res://.godot/imported/jackson.png-be7d1ece95c9dde3d48ade66cd567f6b.ctex"]
 
 [params]
 

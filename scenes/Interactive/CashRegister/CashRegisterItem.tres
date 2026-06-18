@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bq6tsci6cyd1m"]
+
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Item/ItemData.cs" id="1_luhkf"]
+[ext_resource type="Texture2D" uid="uid://dpxukmm6afkbn" path="res://Shared/Sprites/builds.png" id="1_p2vic"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xm8j"]
+atlas = ExtResource("1_p2vic")
+region = Rect2(65, 17, 22, 16)
+
+[resource]
+script = ExtResource("1_luhkf")
+ItemName = "Cash Register"
+ItemTexture = SubResource("AtlasTexture_3xm8j")
+metadata/_custom_type_script = "uid://c8tswwpf2ox6o"

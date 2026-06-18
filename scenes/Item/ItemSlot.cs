@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace sigmarket.Scenes.Interactive.Item;
+namespace sigmarket.Scenes.Item;
 
 public partial class ItemSlot : TextureRect
 {

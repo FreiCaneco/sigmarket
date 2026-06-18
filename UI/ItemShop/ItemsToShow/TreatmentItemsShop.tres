@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemCollection" format=3 uid="uid://bpjor6grqxm0m"]
+
+[ext_resource type="Script" uid="uid://b637tti5a7vbk" path="res://Systems/Inventory/ItemCollection.cs" id="1_1n7ra"]
+
+[resource]
+script = ExtResource("1_1n7ra")
+Items = Array[Resource]([])
+metadata/_custom_type_script = "uid://b637tti5a7vbk"

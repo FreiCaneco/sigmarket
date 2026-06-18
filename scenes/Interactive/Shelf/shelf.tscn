@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ded12uhg5122q" path="res://Scenes/Components/interaction_component.tscn" id="2_00mi8"]
 [ext_resource type="Script" uid="uid://fw1xam6swtc0" path="res://Scenes/Interactive/Shelf/ShelfSlots.cs" id="3_6m23h"]
 [ext_resource type="Script" uid="uid://bca4jpbc8rkqh" path="res://Scenes/Interactive/Shelf/ShelfItemContainer.cs" id="3_kehti"]
-[ext_resource type="PackedScene" uid="uid://xh0c14u401rd" path="res://Scenes/Interactive/Item/item_slot.tscn" id="4_aqwft"]
+[ext_resource type="PackedScene" uid="uid://xh0c14u401rd" path="res://Scenes/Item/item_slot.tscn" id="4_aqwft"]
 
 [node name="Shelf" type="Node2D" unique_id=728957880]
 script = ExtResource("1_wgmku")
