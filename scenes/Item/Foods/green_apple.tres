@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cxx046m5tmmyy"]
+
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://Scenes/Item/items6x6.png" id="1_s7m15"]
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Item/ItemData.cs" id="2_2odf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmr5m"]
+atlas = ExtResource("1_s7m15")
+region = Rect2(64, 40, 8, 8)
+
+[resource]
+script = ExtResource("2_2odf6")
+ItemTag = 1
+ItemName = "GreenApple"
+ItemTexture = SubResource("AtlasTexture_fmr5m")
+ItemPrice = 20.0

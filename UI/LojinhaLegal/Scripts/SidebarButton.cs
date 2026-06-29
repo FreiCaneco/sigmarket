@@ -1,7 +1,7 @@
 using Godot;
 using sigmarket.Systems.Inventory;
 
-namespace sigmarket.Ui.ItemShop.Scripts;
+namespace sigmarket.Ui.LojinhaLegal.Scripts;
 
 public partial class SidebarButton : TextureButton
 {

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8jrn5wk7h3yu"]
 
 [ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="1_n6rkm"]
-[ext_resource type="Script" uid="uid://b3755dlpdnulv" path="res://Ui/ItemShop/Scripts/ShopItemHolder.cs" id="2_r3kf0"]
+[ext_resource type="Script" uid="uid://b3755dlpdnulv" path="res://Ui/LojinhaLegal/Scripts/ShopItemHolder.cs" id="2_r3kf0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j6dwq"]
 texture = ExtResource("1_n6rkm")

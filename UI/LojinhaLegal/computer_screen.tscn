@@ -1,28 +1,29 @@
 [gd_scene format=3 uid="uid://d2igbxkdnor2r"]
 
-[ext_resource type="Script" uid="uid://b525rorcix6ly" path="res://Ui/ItemShop/Scripts/ComputerScreen.cs" id="1_14cw0"]
+[ext_resource type="Script" uid="uid://ceycbnslmagha" path="res://Ui/LojinhaLegal/Scripts/LojinhaLegal.cs" id="1_14cw0"]
 [ext_resource type="Theme" uid="uid://bll6cjo41hwwv" path="res://Ui/Themes/sidebar.tres" id="2_a1c6t"]
 [ext_resource type="Texture2D" uid="uid://dfn7x5uxouv5x" path="res://Ui/Sprites/computer/shop_menu.png" id="3_75wj3"]
-[ext_resource type="ButtonGroup" uid="uid://cmqnd32br6b7w" path="res://Ui/ItemShop/ButtonGroups/AreasButtonsGroup.tres" id="4_75wj3"]
+[ext_resource type="ButtonGroup" uid="uid://cmqnd32br6b7w" path="res://Ui/LojinhaLegal/ButtonGroups/AreasButtonsGroup.tres" id="4_75wj3"]
 [ext_resource type="Texture2D" uid="uid://cmxuv607bqsh3" path="res://Ui/Sprites/computer/new buttons states.png" id="4_m3l5o"]
-[ext_resource type="ButtonGroup" uid="uid://3cqxyb11ngo6" path="res://Ui/ItemShop/ButtonGroups/TabButtonsGroup.tres" id="5_a1c6t"]
+[ext_resource type="ButtonGroup" uid="uid://3cqxyb11ngo6" path="res://Ui/LojinhaLegal/ButtonGroups/TabButtonsGroup.tres" id="5_a1c6t"]
 [ext_resource type="Texture2D" uid="uid://cdem51h5r7vbm" path="res://Ui/Sprites/computer/TabButtonStates.png" id="5_f07l8"]
-[ext_resource type="ButtonGroup" uid="uid://c7fhh221tbfy6" path="res://Ui/ItemShop/ButtonGroups/ItemsButtonsGroup.tres" id="6_m3l5o"]
-[ext_resource type="Texture2D" uid="uid://8cfqoqfrpesc" path="res://Ui/Sprites/computer/secret shop icon.png" id="6_mrbdy"]
-[ext_resource type="Script" uid="uid://dsf04xp18lbqk" path="res://Ui/ItemShop/Scripts/SidebarButton.cs" id="6_vb5ax"]
-[ext_resource type="ButtonGroup" uid="uid://bpkf5v2nrodsu" path="res://Ui/ItemShop/ButtonGroups/UpgradesButtonsGroup.tres" id="7_f07l8"]
-[ext_resource type="Resource" uid="uid://ckciol1hsmhq2" path="res://Ui/ItemShop/ItemsToShow/FloorsItemsShop.tres" id="7_ychw6"]
-[ext_resource type="Resource" uid="uid://uoplpptorl1d" path="res://Ui/ItemShop/ItemsToShow/WallsItemsShop.tres" id="8_18o4v"]
-[ext_resource type="ButtonGroup" uid="uid://g68mb50k6ckb" path="res://Ui/ItemShop/ButtonGroups/ShopsButtonsGroup.tres" id="8_mrbdy"]
-[ext_resource type="Resource" uid="uid://c4gplf4bbedhe" path="res://Ui/ItemShop/ItemsToShow/SectorsItemsShop.tres" id="9_djrwh"]
-[ext_resource type="Resource" uid="uid://bm5vpi4kroiog" path="res://Ui/ItemShop/ItemsToShow/FurnitureItemsShop.tres" id="11_vmn6y"]
-[ext_resource type="PackedScene" uid="uid://c8jrn5wk7h3yu" path="res://Ui/ItemShop/shop_item_holder.tscn" id="12_1uvxc"]
-[ext_resource type="Resource" uid="uid://bbn2ffyyoh313" path="res://Ui/ItemShop/ItemsToShow/FoodsItemsShop.tres" id="12_2fami"]
-[ext_resource type="Resource" uid="uid://clfoybnhbt7t" path="res://Ui/ItemShop/ItemsToShow/ProductsItemsShop.tres" id="13_40c6e"]
-[ext_resource type="Resource" uid="uid://clc8tsucl7hrv" path="res://Ui/ItemShop/ItemsToShow/ServicesItemsShop.tres" id="15_3aegq"]
-[ext_resource type="Resource" uid="uid://mm1dmkm0054h" path="res://Ui/ItemShop/ItemsToShow/HireItemsShop.tres" id="16_5c0i8"]
-[ext_resource type="Resource" uid="uid://bs3wsu0d7gxgk" path="res://Ui/ItemShop/ItemsToShow/MarketingItemsShop.tres" id="17_ea827"]
-[ext_resource type="Resource" uid="uid://bpjor6grqxm0m" path="res://Ui/ItemShop/ItemsToShow/TreatmentItemsShop.tres" id="18_v0nka"]
+[ext_resource type="ButtonGroup" uid="uid://c7fhh221tbfy6" path="res://Ui/LojinhaLegal/ButtonGroups/ItemsButtonsGroup.tres" id="6_m3l5o"]
+[ext_resource type="Script" uid="uid://dsf04xp18lbqk" path="res://Ui/LojinhaLegal/Scripts/SidebarButton.cs" id="6_vb5ax"]
+[ext_resource type="ButtonGroup" uid="uid://bpkf5v2nrodsu" path="res://Ui/LojinhaLegal/ButtonGroups/UpgradesButtonsGroup.tres" id="7_f07l8"]
+[ext_resource type="Resource" uid="uid://ckciol1hsmhq2" path="res://Ui/LojinhaLegal/ItemsToShow/FloorsItemsShop.tres" id="7_ychw6"]
+[ext_resource type="Resource" uid="uid://uoplpptorl1d" path="res://Ui/LojinhaLegal/ItemsToShow/WallsItemsShop.tres" id="8_18o4v"]
+[ext_resource type="ButtonGroup" uid="uid://g68mb50k6ckb" path="res://Ui/LojinhaLegal/ButtonGroups/ShopsButtonsGroup.tres" id="8_mrbdy"]
+[ext_resource type="Resource" uid="uid://c4gplf4bbedhe" path="res://Ui/LojinhaLegal/ItemsToShow/SectorsItemsShop.tres" id="9_djrwh"]
+[ext_resource type="Resource" uid="uid://bm5vpi4kroiog" path="res://Ui/LojinhaLegal/ItemsToShow/FurnitureItemsShop.tres" id="11_vmn6y"]
+[ext_resource type="PackedScene" uid="uid://c8jrn5wk7h3yu" path="res://Ui/LojinhaLegal/shop_item_holder.tscn" id="12_1uvxc"]
+[ext_resource type="Resource" uid="uid://bbn2ffyyoh313" path="res://Ui/LojinhaLegal/ItemsToShow/FoodsItemsShop.tres" id="12_2fami"]
+[ext_resource type="Resource" uid="uid://clfoybnhbt7t" path="res://Ui/LojinhaLegal/ItemsToShow/ProductsItemsShop.tres" id="13_40c6e"]
+[ext_resource type="Resource" uid="uid://clc8tsucl7hrv" path="res://Ui/LojinhaLegal/ItemsToShow/ServicesItemsShop.tres" id="15_3aegq"]
+[ext_resource type="Resource" uid="uid://mm1dmkm0054h" path="res://Ui/LojinhaLegal/ItemsToShow/HireItemsShop.tres" id="16_5c0i8"]
+[ext_resource type="Resource" uid="uid://bs3wsu0d7gxgk" path="res://Ui/LojinhaLegal/ItemsToShow/MarketingItemsShop.tres" id="17_ea827"]
+[ext_resource type="Resource" uid="uid://bpjor6grqxm0m" path="res://Ui/LojinhaLegal/ItemsToShow/TreatmentItemsShop.tres" id="18_v0nka"]
+[ext_resource type="Texture2D" uid="uid://dgabfwswkt7qi" path="res://Ui/Sprites/computer/HOVERSKART.png" id="22_8rc70"]
+[ext_resource type="Texture2D" uid="uid://bva3n5uwgc7am" path="res://Ui/Sprites/computer/CartCuponsWithBuying.png" id="25_vmn6y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u32o4"]
 texture = ExtResource("3_75wj3")
@@ -212,11 +213,27 @@ region = Rect2(192, 32, 78, 16)
 atlas = ExtResource("5_f07l8")
 region = Rect2(192, 63, 78, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j70hn"]
+atlas = ExtResource("22_8rc70")
+region = Rect2(208, 19, 15, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4uag"]
+atlas = ExtResource("22_8rc70")
+region = Rect2(273, 19, 15, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0rsy"]
+atlas = ExtResource("22_8rc70")
+region = Rect2(224, 19, 15, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1yel"]
+texture = ExtResource("25_vmn6y")
+region_rect = Rect2(35, 14, 121, 159)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u32o4"]
 atlas = ExtResource("3_75wj3")
 region = Rect2(287, 0, 33, 180)
 
-[node name="ComputerScreen" type="Control" unique_id=1224048351 node_paths=PackedStringArray("AreasButtons", "ItemsButtons", "UpgradesButtons", "ItemHolderGrid", "AreasTab", "ItemsTab", "UpgradesTab", "SecretShopTab")]
+[node name="ComputerScreen" type="Control" unique_id=1224048351 node_paths=PackedStringArray("AreasTab", "AreasButtons", "ItemsTab", "ItemsButtons", "UpgradesTab", "UpgradesButtons", "CartTab", "CartPage", "ItemHolderPage", "AllItemHolders")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -225,14 +242,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_14cw0")
+AreasTab = NodePath("HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder/Areas")
 AreasButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/AreasButtons")
+ItemsTab = NodePath("HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder/Items")
 ItemsButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/ItemsButtons")
+UpgradesTab = NodePath("HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder/Upgrades")
 UpgradesButtons = NodePath("HBoxContainer/SideBar/HBoxContainer/SectionsHolder/UpgradesButtons")
-ItemHolderGrid = NodePath("HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer")
-AreasTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Areas")
-ItemsTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Items")
-UpgradesTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/Upgrades")
-SecretShopTab = NodePath("HBoxContainer/Center/TabsAndContent/TabsHolder/SecretShop")
+CartTab = NodePath("HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder/SecretShop")
+CartPage = NodePath("HBoxContainer/Center/TabsAndContent/Cart")
+ItemHolderPage = NodePath("HBoxContainer/Center/TabsAndContent/ItemHolderCollection")
+AllItemHolders = NodePath("HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=11702789]
 layout_mode = 1
@@ -465,12 +484,16 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="TabsHolder" type="HBoxContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=304290542]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=226261013]
+layout_mode = 2
+theme_override_constants/margin_right = 30
+
+[node name="TabsHolder" type="HBoxContainer" parent="HBoxContainer/Center/TabsAndContent/MarginContainer" unique_id=304290542]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="Areas" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=339958154]
+[node name="Areas" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder" unique_id=339958154]
 custom_minimum_size = Vector2(300, 96)
 layout_mode = 2
 toggle_mode = true
@@ -480,7 +503,7 @@ texture_pressed = SubResource("AtlasTexture_fxjv4")
 texture_hover = SubResource("AtlasTexture_413ax")
 stretch_mode = 4
 
-[node name="Items" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=742530061]
+[node name="Items" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder" unique_id=742530061]
 custom_minimum_size = Vector2(294, 96)
 layout_mode = 2
 toggle_mode = true
@@ -490,7 +513,7 @@ texture_pressed = SubResource("AtlasTexture_3v4k6")
 texture_hover = SubResource("AtlasTexture_n31oq")
 stretch_mode = 4
 
-[node name="Upgrades" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=16059587]
+[node name="Upgrades" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder" unique_id=16059587]
 custom_minimum_size = Vector2(468, 96)
 layout_mode = 2
 toggle_mode = true
@@ -500,15 +523,19 @@ texture_pressed = SubResource("AtlasTexture_gl6md")
 texture_hover = SubResource("AtlasTexture_wld4q")
 stretch_mode = 4
 
-[node name="SecretShop" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/TabsHolder" unique_id=892629252]
-custom_minimum_size = Vector2(198, 72)
+[node name="SecretShop" type="TextureButton" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/TabsHolder" unique_id=892629252]
+custom_minimum_size = Vector2(90, 66)
 layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
 toggle_mode = true
 button_group = ExtResource("5_a1c6t")
-texture_normal = ExtResource("6_mrbdy")
+texture_normal = SubResource("AtlasTexture_j70hn")
+texture_pressed = SubResource("AtlasTexture_q4uag")
+texture_hover = SubResource("AtlasTexture_j0rsy")
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=1212895965]
+[node name="ItemHolderCollection" type="MarginContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=1212895965]
 custom_minimum_size = Vector2(1452, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -516,7 +543,7 @@ theme_override_constants/margin_left = 102
 theme_override_constants/margin_top = 42
 theme_override_constants/margin_right = 102
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Center/TabsAndContent/MarginContainer" unique_id=730392783]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection" unique_id=730392783]
 custom_minimum_size = Vector2(1248, 912)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -524,53 +551,74 @@ size_flags_vertical = 8
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer" unique_id=1578797797]
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer" unique_id=1578797797]
 layout_mode = 2
 theme_override_constants/h_separation = 72
 theme_override_constants/v_separation = 84
 columns = 4
 
-[node name="ShopItemHolder" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=408819148 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=408819148 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder2" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1541182680 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder2" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1541182680 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder3" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1714011680 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder3" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1714011680 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder4" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1841539162 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder4" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1841539162 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder5" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1770259467 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder5" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1770259467 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder6" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1592488689 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder6" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1592488689 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder7" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=813514222 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder7" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=813514222 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder8" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1724245211 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder8" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1724245211 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder9" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1394615076 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder9" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1394615076 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder10" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1802487921 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder10" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1802487921 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder11" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1988993386 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder11" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1988993386 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder12" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=151767463 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder12" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=151767463 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder13" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1675498932 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder13" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1675498932 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
 
-[node name="ShopItemHolder14" parent="HBoxContainer/Center/TabsAndContent/MarginContainer/ScrollContainer/GridContainer" unique_id=1705797721 instance=ExtResource("12_1uvxc")]
+[node name="ShopItemHolder14" parent="HBoxContainer/Center/TabsAndContent/ItemHolderCollection/ScrollContainer/GridContainer" unique_id=1705797721 instance=ExtResource("12_1uvxc")]
 layout_mode = 2
+
+[node name="Cart" type="HBoxContainer" parent="HBoxContainer/Center/TabsAndContent" unique_id=481248023]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Center/TabsAndContent/Cart" unique_id=926019459]
+custom_minimum_size = Vector2(726, 0)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="ItemList" type="VBoxContainer" parent="HBoxContainer/Center/TabsAndContent/Cart/ScrollContainer" unique_id=792877819]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Center/TabsAndContent/Cart" unique_id=236308987]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_x1yel")
 
 [node name="BeerAd" type="TextureRect" parent="HBoxContainer" unique_id=1482663327]
 custom_minimum_size = Vector2(198, 0)

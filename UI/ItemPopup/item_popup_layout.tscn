@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsiuehb8jc541" path="res://Ui/Sprites/computer/shop-popup-components.png" id="1_jgr2a"]
 [ext_resource type="Script" uid="uid://cbbpwvuelmoly" path="res://Ui/ItemPopup/ItemPopup.cs" id="2_dcqp6"]
 [ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="3_pvy4q"]
+[ext_resource type="FontFile" uid="uid://bl8dulldl417o" path="res://Shared/Fonts/Tiny5-Regular.ttf" id="4_jgr2a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxfpb"]
 texture = ExtResource("1_jgr2a")
@@ -32,26 +33,24 @@ region_rect = Rect2(4, 3, 44, 44)
 atlas = ExtResource("1_jgr2a")
 region = Rect2(52, 2, 42, 15)
 
-[node name="ItemPopupLayout" type="PanelContainer" unique_id=343815476 node_paths=PackedStringArray("TopBar", "CloseButton", "ItemTexture")]
-z_index = 10
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgr2a"]
+atlas = ExtResource("1_jgr2a")
+region = Rect2(52, 19, 42, 15)
+
+[node name="ItemPopupLayout" type="PanelContainer" unique_id=343815476 node_paths=PackedStringArray("TopBar", "CloseButton", "ItemTexture", "ItemPrice", "ItemDescription", "BuyButton")]
 custom_minimum_size = Vector2(720, 534)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -348.0
-offset_top = -255.0
-offset_right = 372.0
-offset_bottom = 279.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 720.0
+offset_bottom = 534.0
+pivot_offset = Vector2(360, 267)
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_cxfpb")
 script = ExtResource("2_dcqp6")
 TopBar = NodePath("MarginContainer/VBoxContainer/TopBar")
 CloseButton = NodePath("MarginContainer/VBoxContainer/TopBar/MarginContainer/ClosePopup")
 ItemTexture = NodePath("MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide/PanelContainer/ItemTexture")
+ItemPrice = NodePath("MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide/PanelContainer2/Price")
+ItemDescription = NodePath("MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide/PanelContainer/Description")
+BuyButton = NodePath("MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide/BuyButton")
 Margin = 300.0
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2143878345]
@@ -67,6 +66,7 @@ theme_override_constants/separation = 0
 [node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1865367205]
 custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
+mouse_default_cursor_shape = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1091816008]
 layout_mode = 2
@@ -119,6 +119,12 @@ custom_minimum_size = Vector2(264, 114)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_n1ybn")
 
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/LeftSide/PanelContainer2" unique_id=1971449877]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_jgr2a")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
 [node name="RightSide" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer" unique_id=745117918]
 custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
@@ -129,16 +135,19 @@ custom_minimum_size = Vector2(264, 264)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_e0rkk")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide/PanelContainer" unique_id=173640468]
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide/PanelContainer" unique_id=173640468]
+custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("4_jgr2a")
+theme_override_font_sizes/font_size = 28
 horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide" unique_id=303521851]
+[node name="BuyButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MainContentMargin/HBoxContainer/RightSide" unique_id=303521851]
 custom_minimum_size = Vector2(252, 90)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_n1ybn")
+texture_hover = SubResource("AtlasTexture_jgr2a")
 stretch_mode = 5

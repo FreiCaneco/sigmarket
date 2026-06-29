@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://brlenjhdjewdm"]
+
+[ext_resource type="Texture2D" uid="uid://dhi4uv3qqt8a7" path="res://Ui/Sprites/computer/componentes_ui_site.png" id="1_cuyvu"]
+[ext_resource type="FontFile" uid="uid://bl8dulldl417o" path="res://Shared/Fonts/Tiny5-Regular.ttf" id="2_01ni5"]
+[ext_resource type="Script" uid="uid://cp7s0dv8i6ube" path="res://Ui/LojinhaLegal/Scripts/CartListPiece.cs" id="2_ihny5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qom3t"]
+texture = ExtResource("1_cuyvu")
+region_rect = Rect2(16, 80, 121, 8)
+
+[node name="CartListPiece" type="PanelContainer" unique_id=698867513]
+custom_minimum_size = Vector2(726, 48)
+offset_right = 121.0
+offset_bottom = 16.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_qom3t")
+script = ExtResource("2_ihny5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2122552311]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="HBoxContainer" unique_id=1359088586]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_01ni5")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="PriceAndQuantity" type="Label" parent="HBoxContainer" unique_id=908958109]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_01ni5")
+theme_override_font_sizes/font_size = 36
+text = "$"

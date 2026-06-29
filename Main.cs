@@ -10,7 +10,7 @@ public partial class Main : Node2D
 	private CanvasLayer _canvasLayer;
 	
 	private PackedScene _gameScene = GD.Load<PackedScene>("res://Scenes/game.tscn");
-	private PackedScene _computerMenuScene = GD.Load<PackedScene>("res://UI/ItemShop/computer_screen.tscn");
+	private PackedScene _computerMenuScene = GD.Load<PackedScene>("res://Ui/LojinhaLegal/computer_screen.tscn");
 
 	[Export] public MainMenu MainMenu;
 

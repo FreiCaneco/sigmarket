@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b2pf0ocqxbpyu"]
+
+[ext_resource type="Texture2D" uid="uid://sh5u2cgkgf0r" path="res://Scenes/Item/items6x6.png" id="1_tblil"]
+[ext_resource type="Script" uid="uid://c8tswwpf2ox6o" path="res://Scenes/Item/ItemData.cs" id="2_abdmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a46ta"]
+atlas = ExtResource("1_tblil")
+region = Rect2(72, 40, 8, 8)
+
+[resource]
+script = ExtResource("2_abdmi")
+ItemTag = 1
+ItemName = "Carrot"
+ItemTexture = SubResource("AtlasTexture_a46ta")
+ItemDescription = "Uma cenoura linda e laranja, como as flores alaranjadas de um bom e velho outono."
+ItemPrice = 10.0

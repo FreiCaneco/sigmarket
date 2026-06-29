@@ -19,8 +19,8 @@ public partial class GlobalData : Node
     
     // alterar o acesso a camera e ao jogador.
 
+    public double PlayerMoney = 30;
     public int CurrentDay = 1;
     public PeriodCycle CurrentPeriod = PeriodCycle.Day;
-
     public Vector2 FinalPixelPosition = new(160,0);
 }
